@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Negocio
+namespace Business.Entities
 {
     public class BusinessEntity
     {
@@ -13,14 +13,15 @@ namespace Negocio
         }
 
         private int _ID;
-        private int ID
+        private States _State;
+
+        public int ID
         {
             get { return _ID;  }
             set { _ID = value; }
         }
 
-        private States _State;
-        private States State
+        public States State
         {
             get { return _State; }
             set { _State = value; } 

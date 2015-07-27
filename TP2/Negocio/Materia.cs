@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Negocio
+namespace Business.Entities
 {
     public class Materia: BusinessEntity
     {
         private string _Descripcion;
+        private int _HSSemanales;
+        private int _HSTotales;
+        private int _IDPlan;
 
         public string Descripcion
         {
@@ -16,23 +19,17 @@ namespace Negocio
             set { _Descripcion = value; }
         }
 
-        private int _HSSemanales;
-
         public int HSSemanales
         {
             get { return _HSSemanales; }
             set { _HSSemanales = value; }
         }
 
-        private int _HSTotales;
-
         public int HSTotales
         {
             get { return _HSTotales; }
             set { _HSTotales = value; }
         }
-
-        private int _IDPlan;
 
         public int IDPlan
         {

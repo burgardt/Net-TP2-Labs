@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Negocio
+namespace Business.Entities
 {
-    public class Plan
+    public class Plan:BusinessEntity
     {
         private string _Descripcion;
+        private int _IDEspecialidad;
 
         public string Descripcion
         {
             get { return _Descripcion; }
             set { _Descripcion = value; }
         }
-
-        private int _IDEspecialidad;
 
         public int IDEspecialidad
         {

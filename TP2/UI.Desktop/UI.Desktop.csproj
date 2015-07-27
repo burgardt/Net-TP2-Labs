@@ -74,6 +74,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
+      <Project>{5cc7c59c-bbde-45d7-bf25-6255f783c7de}</Project>
+      <Name>Business.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Business.Entities.csproj">
+      <Project>{1a6d2368-3a3d-427c-801d-ab0a80310f01}</Project>
+      <Name>Business.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

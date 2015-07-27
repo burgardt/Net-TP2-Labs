@@ -7,8 +7,8 @@
     <ProjectGuid>{1A6D2368-3A3D-427C-801D-AB0A80310F01}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Negocio</RootNamespace>
-    <AssemblyName>Negocio</AssemblyName>
+    <RootNamespace>Business.Entities</RootNamespace>
+    <AssemblyName>Business.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,6 +44,7 @@
     <Compile Include="Comision.cs" />
     <Compile Include="Curso.cs" />
     <Compile Include="DocenteCurso.cs" />
+    <Compile Include="Especialidad.cs" />
     <Compile Include="Materia.cs" />
     <Compile Include="Modulo.cs" />
     <Compile Include="ModuloUsuario.cs" />

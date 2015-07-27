@@ -1,3 +1,15 @@
 C:\NET\TP2L01\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
 C:\TP2 [Tp, Labs]\TP2L01\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
 C:\Users\LENI-ALUMNO\TP2\TP2L02\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\obj\Debug\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Entities.pdb
