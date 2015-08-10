@@ -13,3 +13,4 @@ C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Logic
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Entities.dll
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro Gimenez\Documents\GitHub\Net-TP2-Labs\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config

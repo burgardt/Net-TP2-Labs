@@ -18,6 +18,11 @@ namespace Business.Logic
             set { _usuarioData = value; }
         }
 
+        public UsuarioLogic()
+        {
+            _usuarioData = new UsuarioAdapter();
+        }
+
         public Usuario GetOne(int ID)
         {
             return UsuarioData.GetOne(ID);
