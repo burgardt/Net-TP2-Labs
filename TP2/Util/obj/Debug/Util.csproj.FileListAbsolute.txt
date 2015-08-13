@@ -1,0 +1,5 @@
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Util\bin\Debug\Util.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Util\bin\Debug\Util.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Util\obj\Debug\Util.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Util\obj\Debug\Util.pdb

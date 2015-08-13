@@ -1,0 +1,7 @@
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\bin\Debug\Data.Database.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\bin\Debug\Data.Database.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\obj\Debug\Data.Database.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\obj\Debug\Data.Database.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\Data.Database\obj\Debug\Data.Database.pdb

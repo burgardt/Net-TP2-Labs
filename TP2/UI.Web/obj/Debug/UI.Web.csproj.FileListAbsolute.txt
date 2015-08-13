@@ -1,0 +1,6 @@
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\bin\UI.Web.dll.config
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\bin\UI.Web.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\bin\UI.Web.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\obj\Debug\UI.Web.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\obj\Debug\UI.Web.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs\TP2\UI.Web\obj\Debug\UI.Web.pdb
