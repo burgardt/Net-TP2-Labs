@@ -49,10 +49,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Visual Studio 2010\Projects\TP2\Business.Logic\Business.Logic.csproj">
-      <Project>{bab702f0-2e1c-42d6-bc5d-6161e95eca16}</Project>
-      <Name>Business.Logic</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Negocio\Business.Entities.csproj">
       <Project>{1a6d2368-3a3d-427c-801d-ab0a80310f01}</Project>
       <Name>Business.Entities</Name>
