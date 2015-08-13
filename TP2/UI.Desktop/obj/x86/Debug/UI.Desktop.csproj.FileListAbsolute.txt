@@ -1,0 +1,52 @@
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Data.Database.dll
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\Data.Database.pdb
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.exe
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.pdb
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.formUsuarios.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.ApplicationForm.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.PersonaDesktop.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormPersonas.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormIngreso.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormAdmin.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormUsr.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormEspecialidades.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormPlanes.resources
+C:\Users\Mauro Gimenez\Documents\Visual Studio 2010\Projects\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.PlanDesktop.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Business.Logic.dll
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Data.Database.dll
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Business.Logic.pdb
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\bin\Debug\Data.Database.pdb
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.ApplicationForm.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.EspecialidadDesktop.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormAdmin.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormEspecialidades.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormIngreso.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormPersonas.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormPlanes.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormUsr.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.FormUsuarios.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.PersonaDesktop.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.PlanDesktop.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.UsuarioDesktop.resources
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.exe
+C:\Users\Mauro\Desktop\TP2\UI.Desktop\obj\x86\Debug\UI.Desktop.pdb
