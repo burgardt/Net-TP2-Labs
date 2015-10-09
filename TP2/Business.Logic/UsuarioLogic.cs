@@ -27,6 +27,8 @@ namespace Business.Logic
         //---------------------------------------------------------------------------------------------------------------
          public Usuario GetOne(int id)
          {
+             // ¿Mas simple? return UsuarioData.GetOne(id);
+
              Usuario usuario = new Usuario();
              usuario = UsuarioData.GetOne(id);
              return usuario;
@@ -35,7 +37,9 @@ namespace Business.Logic
         //---------------------------------------------------------------------------------------------------------------
          public List<Usuario> GetAll()
          {
-          
+
+             // ¿Mas simple? return UsuarioData.GetAll();
+
             List<Usuario> lista = new List<Usuario>();
             lista = UsuarioData.GetAll();
             return lista;

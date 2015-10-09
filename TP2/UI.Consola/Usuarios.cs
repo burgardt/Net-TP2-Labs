@@ -64,10 +64,30 @@ namespace UI.Consola
 
         public void Consultar()
         {
-            Console.Clear();
-            Console.WriteLine("Ingrese el ID del usuario a consultar");
-            int ID = int.Parse(Console.ReadLine());
-            this.MostrarDatos(UsuarioNegocio.GetOne(ID));
+            try
+            {
+                Console.Clear();
+                Console.WriteLine("Ingrese el ID del usuario a consultar");
+                int ID = int.Parse(Console.ReadLine());
+                this.MostrarDatos(UsuarioNegocio.GetOne(ID));
+            }
+            catch (FormatException fe)
+            {
+                Console.WriteLine();
+                Console.WriteLine("La ID ingresada debe ser un nro entero.");   
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine();
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Presione una tecla para continuar.");
+                Console.ReadLine();
+
+            }
+
         }
 
     }
