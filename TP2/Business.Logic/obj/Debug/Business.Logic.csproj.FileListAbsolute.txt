@@ -34,3 +34,12 @@ C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Business.Logic\bin\Debug\Busines
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Business.Logic\obj\Debug\Business.Logic.dll
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Business.Logic\obj\Debug\Business.Logic.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Business.Logic.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Business.Logic.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Data.Database.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Data.Database.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\obj\Debug\Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\obj\Debug\Business.Logic.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Business.Logic\obj\Debug\Business.Logic.pdb

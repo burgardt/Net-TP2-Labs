@@ -22,3 +22,15 @@ C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\UI.Consola\bin\Debug\Business.Lo
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\UI.Consola\bin\Debug\Business.Entities.pdb
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\UI.Consola\bin\Debug\Data.Database.pdb
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\UI.Consola\obj\Debug\UI.Consola.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\UI.Consola.exe.config
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\obj\Debug\UI.Consola.exe
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\obj\Debug\UI.Consola.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\UI.Consola.exe
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\UI.Consola.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Business.Logic.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Data.Database.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Business.Logic.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\bin\Debug\Data.Database.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Consola\obj\Debug\UI.Consola.csprojResolveAssemblyReference.cache

@@ -8,3 +8,8 @@ C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Negocio\bin\Debug\Business.Entit
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Negocio\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Negocio\obj\Debug\Business.Entities.dll
 C:\Users\Burgardt\Source\Repos\Net-TP2-Labs\TP2\Negocio\obj\Debug\Business.Entities.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Negocio\bin\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Negocio\bin\Debug\Business.Entities.pdb
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Negocio\obj\Debug\Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Negocio\obj\Debug\Business.Entities.dll
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\Negocio\obj\Debug\Business.Entities.pdb
