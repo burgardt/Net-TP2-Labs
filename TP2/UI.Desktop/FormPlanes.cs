@@ -19,11 +19,59 @@ namespace UI.Desktop
             this.dgvPlanes.AutoGenerateColumns = false;
         }
 
+        public struct Fila
+        {
+            private int _id;
+            private string _descripcion;
+            private string _especialidad;
+
+            public int ID
+            {
+                get { return _id; }
+                set { _id = value; }
+            }            
+            public string Descripcion
+            {
+                get { return _descripcion; }
+                set { _descripcion = value; }
+            }
+            public string Especialidad
+            {
+                get { return _especialidad; }
+                set { _especialidad = value; }
+            }
+        }
+
         //METODOS------------------------------------------------------------------------------------------------------
         public void Listar()
         {
+          
             PlanLogic pl = new PlanLogic();
-            this.dgvPlanes.DataSource = pl.GetAll();
+            List<Plan> planes = new List<Plan>();
+            planes = pl.GetAll();
+
+            EspecialidadLogic el = new EspecialidadLogic();
+            List<Especialidad> especialidades = new List<Especialidad>();
+            especialidades = el.GetAll();
+
+            List<Fila> filas = new List<Fila>();
+            foreach (Plan plan in planes)
+            {
+                Fila fila = new Fila();
+                fila.ID = plan.ID;
+                fila.Descripcion = plan.Descripcion;
+                foreach (Especialidad especialidad in especialidades)
+                {
+                    if (plan.IDEspecialidad == especialidad.ID)
+                    {
+                        fila.Especialidad = especialidad.Descripcion;
+                    }
+                }
+                filas.Add(fila);
+            }
+            
+            this.dgvPlanes.DataSource = filas;
+           
         }
         //EVENTOS-----------------------------------------------------------------------------------------------------
 
@@ -38,7 +86,7 @@ namespace UI.Desktop
         {
             try
             {
-                int id = ((Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                int id = ((Fila)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
                 PlanDesktop pd= new PlanDesktop(id, ModoForm.Modificacion);
                 pd.ShowDialog();
                 this.Listar();
@@ -53,7 +101,7 @@ namespace UI.Desktop
         {
             try
             {
-                int id = ((Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+                int id = ((Fila)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
                 PlanDesktop pd= new PlanDesktop(id, ModoForm.Baja);
                 pd.ShowDialog();
                 this.Listar();

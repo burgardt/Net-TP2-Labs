@@ -29,7 +29,6 @@ namespace UI.Desktop
         {
             try
             {
-                //
                 if (txtIdUsuario.Text == "admin" && txtClave.Text == "admin")
                 {
                     MessageBox.Show("Ha ingresado al sistema como administrador", "Login",
@@ -43,11 +42,19 @@ namespace UI.Desktop
                     Usuario usr = ul.GetOne(int.Parse(txtIdUsuario.Text));
                     if (usr.ID == int.Parse(txtIdUsuario.Text) && usr.Clave == txtClave.Text)
                     {
-                        MessageBox.Show("Ha ingrsado con exito, bienvenido " + usr.NombreUsuario, "Login",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FormUsr fu = new FormUsr();
-                        fu.ShowDialog();
-                        this.Close();
+                        if (usr.Habilitado== true)
+                        {
+                            MessageBox.Show("Ha ingrsado con exito, bienvenido " + usr.NombreUsuario, "Login",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            FormUsr fu = new FormUsr();
+                            fu.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El usuario " + usr.NombreUsuario + " no se encuentra habilitado para ingresar al sistema", "Login",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {

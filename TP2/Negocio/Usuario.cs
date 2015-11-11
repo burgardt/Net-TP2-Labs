@@ -8,12 +8,13 @@ namespace Business.Entities
 {
     public class Usuario:BusinessEntity
     {
-        private string _Apellido;
+        private string _NombreUsuario;
         private string _Clave;
-        private string _Email;
         private bool _Habilitado;
         private string _Nombre;
-        private string _NombreUsuario; 
+        private string _Apellido;
+        private string _Email;
+        private int _IdPersona;
 
         public string NombreUsuario
         {
@@ -25,6 +26,12 @@ namespace Business.Entities
         {
             get { return _Clave; }
             set { _Clave= value; }
+        }
+
+        public bool Habilitado
+        {
+            get { return _Habilitado; }
+            set { _Habilitado = value; }
         }
 
         public string Nombre
@@ -45,10 +52,12 @@ namespace Business.Entities
             set { _Email = value; }
         }
 
-        public bool Habilitado
+        public int IdPersona
         {
-            get { return _Habilitado; }
-            set { _Habilitado = value; }
+            get { return _IdPersona; }
+            set { _IdPersona = value; }
         }
+
+
     }
 }

@@ -18,10 +18,19 @@ namespace UI.Desktop
         private Usuario _UsuarioActual = new Usuario();
 
         //CONSTRUCTORES--------------------------------------------------------------------------------------------------
+        public UsuarioDesktop(int personaId)
+        {
+            InitializeComponent();
+            this.txtPersonaId.Text = personaId.ToString();
+            this.txtPersonaId.ReadOnly = true;
+        }
+
+
         public UsuarioDesktop()
         {
             InitializeComponent();
         }
+
 
         public UsuarioDesktop(ModoForm modo)
             : this()
@@ -29,44 +38,37 @@ namespace UI.Desktop
             this.Modo = modo;
         }
 
+
         public UsuarioDesktop(int ID, ModoForm modo)
             : this()
         {
             this.Modo=modo;
             UsuarioLogic ul = new UsuarioLogic();
             UsuarioActual = ul.GetOne(ID);
-           // this.txtID.Text = UsuarioActual.ID.ToString();
+            this.txtID.Text = UsuarioActual.ID.ToString();
+            this.txtNombre.Text = UsuarioActual.Nombre.ToString();
+            this.txtApellido.Text = UsuarioActual.Apellido.ToString();
+            this.txtEmail.Text = UsuarioActual.Email.ToString();
+            this.txtUsuario.Text = UsuarioActual.NombreUsuario.ToString();
+            this.txtClave.Text = UsuarioActual.Clave.ToString();
+            this.txtConClave.Text = UsuarioActual.Clave.ToString();
+            this.chkHabilitado.Checked = UsuarioActual.Habilitado;
+            this.txtPersonaId.Text = UsuarioActual.IdPersona.ToString();
 
             if (modo == ModoForm.Modificacion)
             {
-                this.txtID.Text = UsuarioActual.ID.ToString();
-                this.txtNombre.Text = UsuarioActual.Nombre.ToString();
-                this.txtApellido.Text = UsuarioActual.Apellido.ToString();
-                this.txtEmail.Text = UsuarioActual.Email.ToString();
-                this.txtUsuario.Text = UsuarioActual.NombreUsuario.ToString();
-                this.txtClave.Text = UsuarioActual.Clave.ToString();
-                this.txtConClave.Text = UsuarioActual.Clave.ToString();
-                this.chkHabilitado.Checked = UsuarioActual.Habilitado;
                 this.btnAceptar.Text = "Guardar";
             }
             else if (modo == ModoForm.Baja)
             {
-                this.txtID.Text = UsuarioActual.ID.ToString();
-                this.txtID.ReadOnly = true;
-                this.txtNombre.Text = UsuarioActual.Nombre.ToString();
                 this.txtNombre.ReadOnly = true;
-                this.txtApellido.Text = UsuarioActual.Apellido.ToString();
                 this.txtApellido.ReadOnly = true;
-                this.txtEmail.Text = UsuarioActual.Email.ToString();
                 this.txtEmail.ReadOnly = true;
-                this.txtUsuario.Text = UsuarioActual.NombreUsuario.ToString();
                 this.txtUsuario.ReadOnly = true;
-                this.txtClave.Text = UsuarioActual.Clave.ToString();
                 this.txtClave.ReadOnly = true;
-                this.txtConClave.Text = UsuarioActual.Clave.ToString();
                 this.txtConClave.ReadOnly = true;
-                this.chkHabilitado.Checked = UsuarioActual.Habilitado;
                 this.chkHabilitado.AutoCheck = false;
+                this.txtPersonaId.ReadOnly = true;
                 this.btnAceptar.Text = "Eliminar";
             }
             else
@@ -91,6 +93,7 @@ namespace UI.Desktop
             this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
             this.txtClave.Text = this.UsuarioActual.Clave;
             this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
+            this.txtPersonaId.Text = this.UsuarioActual.IdPersona.ToString();
         }
 
         public override void MapearADatos()
@@ -114,6 +117,7 @@ namespace UI.Desktop
                 this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
                 this.UsuarioActual.Clave = this.txtClave.Text;
                 this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;
+                this.UsuarioActual.IdPersona = int.Parse(this.txtPersonaId.Text);
             }
         }
 

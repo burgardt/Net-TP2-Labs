@@ -8,15 +8,22 @@ namespace Business.Entities
 {
     public class Persona: BusinessEntity
     {
+        private string _Nombre;
         private string _Apellido;
         private string _Direccion;
         private string _Email;
-        private DateTime _FechaNacimiento;
-        private int _IDPlan;
-        private int _Legajo;
-        private string _Nombre;
         private string _Telefono;
-        private string _TipoPersona;
+        private DateTime _FechaNacimiento;
+        private int _Legajo;
+        private int _TipoPersona;
+        private int _IDPlan;
+
+
+        public string Nombre
+        {
+            get { return _Nombre; }
+            set { _Nombre = value; }
+        }
 
         public string Apellido
         {
@@ -36,16 +43,16 @@ namespace Business.Entities
             set { _Email = value; }
         }
 
+        public string Telefono
+        {
+            get { return _Telefono; }
+            set { _Telefono = value; }
+        }
+
         public DateTime FechaNacimiento
         {
             get { return _FechaNacimiento; }
             set { _FechaNacimiento = value; }
-        }
-
-        public int IDPlan
-        {
-            get { return _IDPlan; }
-            set { _IDPlan = value; }
         }
 
         public int Legajo
@@ -54,22 +61,16 @@ namespace Business.Entities
             set { _Legajo = value; }
         }
 
-        public string Nombre
-        {
-            get { return _Nombre; }
-            set { _Nombre = value; }
-        }
-
-        public string Telefono
-        {
-            get { return _Telefono; }
-            set { _Telefono = value; }
-        }
-
-        public string TipoPersona
+        public int TipoPersona
         {
             get { return _TipoPersona; }
             set { _TipoPersona = value; }
+        }
+
+        public int IDPlan
+        {
+            get { return _IDPlan; }
+            set { _IDPlan = value; }
         }
     }
 }

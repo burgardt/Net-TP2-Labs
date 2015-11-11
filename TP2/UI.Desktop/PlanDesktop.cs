@@ -34,29 +34,27 @@ namespace UI.Desktop
             : this()
         {
             this.Modo = modo;
+
             listaEspecialidades = new List<Especialidad>();
-            PlanLogic pl = new PlanLogic();
             EspecialidadLogic el = new EspecialidadLogic();
+            listaEspecialidades = el.GetAll();
+
+            PlanLogic pl = new PlanLogic();
             PlanSelec = pl.GetOne(ID);
 
             if (modo == ModoForm.Modificacion)
             {
-                //int count = 0;
                 this.txtID.Text = PlanSelec.ID.ToString();
                 this.txtID.ReadOnly = true;
                 this.txtDescripcion.Text = PlanSelec.Descripcion;
                 this.cbxEspecialidad.SelectedItem = 1;
-                /*foreach (Especialidad esp in listaEspecialidades)
+                foreach (Especialidad esp in listaEspecialidades)
                 {
-                    if (PlanSelec.IdEspecialidad == esp.ID)
+                    if (PlanSelec.IDEspecialidad == esp.ID)
                     {
-                        this.cbxEspecialidad.SelectedValue = 2;
+                        this.cbxEspecialidad.Text = esp.Descripcion;
                     }
-                    else
-                    {
-                        count++;
-                    }
-                }*/
+                }
             }
             else if (modo == ModoForm.Baja)
             {
@@ -68,14 +66,12 @@ namespace UI.Desktop
                 {
                     if (PlanSelec.IDEspecialidad == esp.ID)
                     {
-                        this.cbxEspecialidad.SelectedText = esp.Descripcion;
+                        this.cbxEspecialidad.Text = esp.Descripcion;
                     }
                 }
                 this.cbxEspecialidad.Enabled = false;
-            }
-            
+            }           
         }
-
 
         public Plan PlanSelec
         {
@@ -92,7 +88,6 @@ namespace UI.Desktop
                 if (PlanSelec.IDEspecialidad == esp.ID)
                 {
                     this.cbxEspecialidad.SelectedText = esp.Descripcion;
-
                 }
             }
         }
@@ -100,28 +95,28 @@ namespace UI.Desktop
 
         public override void MapearADatos()
         {
-            if (Modo == ModoForm.Alta)
-            {
-                Plan plan = new Plan();
-                PlanSelec = plan;
-                PlanSelec.State = BusinessEntity.States.New;
-            }
-            else
-            {
-                PlanSelec.State = BusinessEntity.States.Modified;
-            }
-
-            if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
-            {
-                this.PlanSelec.Descripcion = this.txtDescripcion.Text;
-                foreach (Especialidad esp in listaEspecialidades)
+                if (Modo == ModoForm.Alta)
                 {
-                    if (cbxEspecialidad.SelectedItem.ToString() == esp.Descripcion)
+                    Plan plan = new Plan();
+                    PlanSelec = plan;
+                    PlanSelec.State = BusinessEntity.States.New;
+                }
+                else
+                {
+                    PlanSelec.State = BusinessEntity.States.Modified;
+                }
+
+                if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
+                {
+                    this.PlanSelec.Descripcion = this.txtDescripcion.Text;
+                    foreach (Especialidad esp in listaEspecialidades)
                     {
-                        this.PlanSelec.IDEspecialidad = esp.ID;
+                        if (cbxEspecialidad.SelectedItem.ToString() == esp.Descripcion)
+                        {
+                            this.PlanSelec.IDEspecialidad = esp.ID;
+                        }
                     }
                 }
-            }
         }
 
 
@@ -148,8 +143,17 @@ namespace UI.Desktop
                 MessageBox.Show("No ha especificado una descripcion para plan");
                 return false;
             }
+            else if (this.cbxEspecialidad.SelectedIndex == -1 &&  this.cbxEspecialidad.Enabled == true)
+            {
+                MessageBox.Show("Error al grabar los datos : \nLa especialidad especificada para el plan no es válida.",
+                    " Debe seleccionar alguna de las especialidades disponibles");
+                return false;
+            }
             else
+            {
                 return true;
+            }
+                
         }
 
 //EVENTOS-------------------------------------------------------------------------------------------------------------

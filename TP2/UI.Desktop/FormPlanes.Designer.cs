@@ -40,7 +40,7 @@
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -90,7 +90,7 @@
             this.dgvPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descripcion,
-            this.idEspecialidad});
+            this.especialidad});
             this.tlPlanes.SetColumnSpan(this.dgvPlanes, 2);
             this.dgvPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlanes.Location = new System.Drawing.Point(3, 3);
@@ -177,13 +177,13 @@
             this.descripcion.ReadOnly = true;
             this.descripcion.Width = 200;
             // 
-            // idEspecialidad
+            // especialidad
             // 
-            this.idEspecialidad.DataPropertyName = "IdEspecialidad";
-            this.idEspecialidad.HeaderText = "Id especialidad";
-            this.idEspecialidad.Name = "idEspecialidad";
-            this.idEspecialidad.ReadOnly = true;
-            this.idEspecialidad.Width = 120;
+            this.especialidad.DataPropertyName = "Especialidad";
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
+            this.especialidad.ReadOnly = true;
+            this.especialidad.Width = 120;
             // 
             // FormPlanes
             // 
@@ -222,6 +222,6 @@
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEspecialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
     }
 }

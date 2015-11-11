@@ -31,8 +31,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de planes", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar lista de planes", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -61,8 +62,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de plan", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar datos de plan", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -77,7 +79,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUpdate = new SqlCommand("UPDATE planes SET" +
+                SqlCommand cmdUpdate = new SqlCommand("UPDATE planes SET " +
                     "desc_plan= @desc_plan, id_especialidad= @id_especialidad WHERE id_plan=@id", SqlConn);
                 cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = plan.ID;
                 cmdUpdate.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
@@ -86,8 +88,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al actualizar datos de plan", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al actualizar datos de plan", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -109,8 +111,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al crear plan", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al crear plan", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -130,8 +132,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar plan", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al eliminar plan", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {

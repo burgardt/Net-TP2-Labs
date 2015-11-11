@@ -29,6 +29,9 @@ namespace Data.Database
                     persona.Telefono = (string)drPersonas["telefono"];
                     persona.FechaNacimiento = (DateTime)drPersonas["fecha_nac"];
                     persona.Legajo = (int)drPersonas["legajo"];
+                    persona.TipoPersona = (int)drPersonas["tipo_persona"];
+                    persona.IDPlan= (int)drPersonas["id_plan"];
+
                     personas.Add(persona);
                 }
                 drPersonas.Close();
@@ -65,6 +68,8 @@ namespace Data.Database
                     persona.Telefono = (string)drPersonas["telefono"];
                     persona.FechaNacimiento = (DateTime)drPersonas["fecha_nac"];
                     persona.Legajo = (int)drPersonas["legajo"];
+                    persona.TipoPersona = (int)drPersonas["tipo_persona"];
+                    persona.IDPlan = (int)drPersonas["id_plan"];
                 }
                 drPersonas.Close();
             }
@@ -92,10 +97,12 @@ namespace Data.Database
                 cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = persona.ID;
                 cmdUpdate.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Nombre;
                 cmdUpdate.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
-                cmdUpdate.Parameters.Add("@direccion", SqlDbType.Bit).Value = persona.Direccion;
+                cmdUpdate.Parameters.Add("@direccion", SqlDbType.VarChar, 50).Value = persona.Direccion;
                 cmdUpdate.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
                 cmdUpdate.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Telefono;
-                cmdUpdate.Parameters.Add("@fecha_nac", SqlDbType.Date, 50).Value = persona.FechaNacimiento;
+                cmdUpdate.Parameters.Add("@fecha_nac", SqlDbType.DateTime).Value = persona.FechaNacimiento;
+                cmdUpdate.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
+                cmdUpdate.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TipoPersona;
                 cmdUpdate.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
                 cmdUpdate.ExecuteNonQuery();
             }
@@ -117,14 +124,16 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdInsert = new SqlCommand("INSERT INTO personas(nombre, apellido, direccion, " +
-                    "email, telefono, fecha_nac, id_plan) VALUES(@nombre, @apellido, @direccion, @email, " +
-                    "@telefono, @fecha_nac, @id_plan) SELECT @@identity", SqlConn);
+                    "email, telefono, fecha_nac, legajo, tipo_persona, id_plan) VALUES(@nombre, @apellido, @direccion, @email, " +
+                    "@telefono, @fecha_nac, @legajo, @tipo_persona, @id_plan) SELECT @@identity", SqlConn);
                 cmdInsert.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = persona.Nombre;
                 cmdInsert.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = persona.Apellido;
-                cmdInsert.Parameters.Add("@direccion", SqlDbType.Bit).Value = persona.Direccion;
+                cmdInsert.Parameters.Add("@direccion", SqlDbType.NVarChar, 50).Value = persona.Direccion;
                 cmdInsert.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = persona.Email;
                 cmdInsert.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = persona.Telefono;
-                cmdInsert.Parameters.Add("@fecha_nac", SqlDbType.Date, 50).Value = persona.FechaNacimiento;
+                cmdInsert.Parameters.Add("@fecha_nac", SqlDbType.DateTime).Value = persona.FechaNacimiento;
+                cmdInsert.Parameters.Add("@legajo", SqlDbType.Int).Value = persona.Legajo;
+                cmdInsert.Parameters.Add("@tipo_persona", SqlDbType.Int).Value = persona.TipoPersona;
                 cmdInsert.Parameters.Add("@id_plan", SqlDbType.Int).Value = persona.IDPlan;
                 persona.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }

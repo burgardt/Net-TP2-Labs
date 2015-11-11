@@ -28,6 +28,7 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
+                    usr.IdPersona = (int)drUsuarios["id_persona"];
 
                     usuarios.Add(usr);
                 }
@@ -66,6 +67,7 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
+                    usr.IdPersona = (int)drUsuarios["id_persona"];
                 }
                 drUsuarios.Close();
             }
@@ -107,8 +109,8 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
-        }
-        
+        } 
+
 
         protected void insert(Usuario usuario)
         {
@@ -116,14 +118,15 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdInsert= new SqlCommand("INSERT INTO usuarios(nombre_usuario, clave, habilitado, "+
-                    "nombre, apellido, email) VALUES(@nombre_usuario, @clave, @habilitado, @nombre, @apellido, "+
-                    "@email) SELECT @@identity", SqlConn);
+                    "nombre, apellido, email, id_persona) VALUES(@nombre_usuario, @clave, @habilitado, @nombre, @apellido, "+
+                    "@email, @id_persona) SELECT @@identity", SqlConn);
                 cmdInsert.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.NombreUsuario;
                 cmdInsert.Parameters.Add("@clave", SqlDbType.VarChar, 50).Value = usuario.Clave;
                 cmdInsert.Parameters.Add("@habilitado", SqlDbType.Bit).Value = usuario.Habilitado;
                 cmdInsert.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = usuario.Nombre;
                 cmdInsert.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdInsert.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.Email;
+                cmdInsert.Parameters.Add("@id_persona", SqlDbType.Int).Value = usuario.IdPersona;
                 usuario.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar()); 
             }
             catch (Exception Ex)
@@ -136,6 +139,7 @@ namespace Data.Database
                 this.CloseConnection();
             }
         }
+
 
         public void Delete(int ID)
         {

@@ -9,8 +9,14 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body runat="server" class="index">
-    <form id="form1" runat="server">
-        <asp:ContentPlaceHolder ID="PageContent" runat="server"></asp:ContentPlaceHolder>
+    <form id="bodyForm" runat="server">
+        <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource">
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+        <div>
+            <asp:ContentPlaceHolder ID="PageContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
