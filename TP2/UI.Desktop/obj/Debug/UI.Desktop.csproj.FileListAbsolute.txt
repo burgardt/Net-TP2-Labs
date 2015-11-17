@@ -56,3 +56,4 @@ C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.Us
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.FormComisiones.resources
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.ComisionDesktop.resources
+C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.FormMaterias.resources

@@ -31,12 +31,11 @@ namespace UI.Desktop
             : this()
         {
             this.Modo = modo;
+
             EspecialidadLogic especialidadLogic = new EspecialidadLogic();
             EspecialidadSelec = especialidadLogic.GetOne(ID);
+            MapearDeDatos();
 
-            this.txtID.Text = EspecialidadSelec.ID.ToString();
-            this.txtID.ReadOnly = true;
-            this.txtDescripcion.Text = EspecialidadSelec.Descripcion;
 
             if (modo == ModoForm.Modificacion)
             {
@@ -53,7 +52,6 @@ namespace UI.Desktop
             }         
         }
 
-        //Metodos
 
         public Especialidad EspecialidadSelec
         {
@@ -66,10 +64,13 @@ namespace UI.Desktop
 
         }
 
+
         public override void MapearDeDatos()
         {
-            this.txtID.Text = this.EspecialidadSelec.ID.ToString();
-            this.txtDescripcion.Text = this.EspecialidadSelec.Descripcion;        }
+            this.txtID.Text = EspecialidadSelec.ID.ToString();
+            this.txtDescripcion.Text = EspecialidadSelec.Descripcion;       
+        }
+
 
         public override void MapearADatos()
         {
@@ -104,6 +105,7 @@ namespace UI.Desktop
             }
         }
 
+
         public override bool Validar()
         { 
             if (this.txtDescripcion.Text == string.Empty)
@@ -115,6 +117,7 @@ namespace UI.Desktop
                 return true;
         }
 
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (this.Validar())
@@ -123,6 +126,7 @@ namespace UI.Desktop
                 this.Close();
             }
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

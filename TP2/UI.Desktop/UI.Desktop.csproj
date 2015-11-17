@@ -110,6 +110,13 @@
     <Compile Include="FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaterias.Designer.cs">
+      <DependentUpon>FormMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MateriaDesktop.cs" />
     <Compile Include="PersonaDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaterias.resx">
+      <DependentUpon>FormMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonaDesktop.resx">
       <DependentUpon>PersonaDesktop.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace UI.Desktop
     {
         private Plan _PlanSelec;
         public List<Especialidad> listaEspecialidades;
-        public EspecialidadLogic el;
+        public EspecialidadLogic especialidadLogic;
 
         public PlanDesktop()
         {
@@ -34,12 +34,8 @@ namespace UI.Desktop
         {
             this.Modo = modo;
 
-            listaEspecialidades = new List<Especialidad>();
-            EspecialidadLogic el = new EspecialidadLogic();
-            listaEspecialidades = el.GetAll();
-
-            PlanLogic pl = new PlanLogic();
-            PlanSelec = pl.GetOne(ID);
+            PlanLogic planLogic = new PlanLogic();
+            PlanSelec = planLogic.GetOne(ID);
             MapearDeDatos();
 
             if (modo == ModoForm.Modificacion)
@@ -54,11 +50,21 @@ namespace UI.Desktop
             }           
         }
 
+
         public Plan PlanSelec
         {
             set { _PlanSelec = value; }
             get { return _PlanSelec; }
         }
+
+        private void PlanDesktop_Load(object sender, EventArgs e)
+        {
+            especialidadLogic = new EspecialidadLogic();
+            this.cbxEspecialidad.DataSource = especialidadLogic.GetAll();
+            this.cbxEspecialidad.ValueMember = "ID";
+            this.cbxEspecialidad.DisplayMember = "Descripcion";
+        }
+
 
         public override void MapearDeDatos()
         {
@@ -91,16 +97,15 @@ namespace UI.Desktop
 
         public override void GuardarCambios()
         {
+            PlanLogic planLogic = new PlanLogic();
             if (Modo == ModoForm.Modificacion || Modo == ModoForm.Alta)
             {
                 MapearADatos();
-                PlanLogic pl = new PlanLogic();
-                pl.Save(PlanSelec);
+                planLogic.Save(PlanSelec);
             }
             else
-            {
-                PlanLogic pl = new PlanLogic();
-                pl.Delete(PlanSelec.ID);
+            {      
+                planLogic.Delete(PlanSelec.ID);
             }
         }
 
@@ -124,7 +129,7 @@ namespace UI.Desktop
             }              
         }
 
-//EVENTOS-------------------------------------------------------------------------------------------------------------
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (this.Validar())
@@ -138,15 +143,6 @@ namespace UI.Desktop
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
-        private void PlanDesktop_Load(object sender, EventArgs e)
-        {
-            el = new EspecialidadLogic();
-            this.cbxEspecialidad.DataSource = el.GetAll();
-            this.cbxEspecialidad.ValueMember = "ID";
-            this.cbxEspecialidad.DisplayMember = "Descripcion";
         }
     }
 }

@@ -69,7 +69,7 @@ namespace UI.Desktop
             }
         }
 
-        //METODOS-----------------------------------------------------------------------------------------------------
+
         public Persona PersonaSelec
         {
             set { _PersonaSelec = value; }

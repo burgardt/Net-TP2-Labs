@@ -49,8 +49,8 @@ namespace UI.Desktop
             PlanLogic planLogic = new PlanLogic();
             List<Plan> planes = planLogic.GetAll();
             EspecialidadLogic especialidadLogic = new EspecialidadLogic();
-
             List<Fila> filas = new List<Fila>();
+
             foreach (Plan plan in planes)
             {
                 Fila fila = new Fila();
@@ -58,8 +58,7 @@ namespace UI.Desktop
                 fila.Descripcion = plan.Descripcion;
                 fila.Especialidad = especialidadLogic.GetOne(plan.IDEspecialidad).Descripcion;
                 filas.Add(fila);
-            }
-            
+            }     
             this.dgvPlanes.DataSource = filas;
            
         }

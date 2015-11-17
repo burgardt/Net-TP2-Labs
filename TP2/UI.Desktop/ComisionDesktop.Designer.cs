@@ -47,7 +47,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.11111F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.88889F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel1.Controls.Add(this.lblId, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblDescripcion, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblAnioEspecialidad, 0, 2);
@@ -113,7 +113,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.Location = new System.Drawing.Point(130, 109);
+            this.btnAceptar.Location = new System.Drawing.Point(129, 109);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 4;
@@ -132,13 +132,14 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtId
+            // txtID
             // 
             this.txtID.BackColor = System.Drawing.SystemColors.Control;
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtID.Location = new System.Drawing.Point(110, 3);
-            this.txtID.Name = "txtId";
-            this.txtID.Size = new System.Drawing.Size(115, 20);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(114, 20);
             this.txtID.TabIndex = 6;
             // 
             // txtDescripcion
@@ -162,7 +163,7 @@
             "5"});
             this.cbxAnioEspecialidad.Location = new System.Drawing.Point(110, 55);
             this.cbxAnioEspecialidad.Name = "cbxAnioEspecialidad";
-            this.cbxAnioEspecialidad.Size = new System.Drawing.Size(115, 21);
+            this.cbxAnioEspecialidad.Size = new System.Drawing.Size(114, 21);
             this.cbxAnioEspecialidad.TabIndex = 8;
             // 
             // cbxPlan
@@ -171,7 +172,7 @@
             this.cbxPlan.FormattingEnabled = true;
             this.cbxPlan.Location = new System.Drawing.Point(110, 82);
             this.cbxPlan.Name = "cbxPlan";
-            this.cbxPlan.Size = new System.Drawing.Size(115, 21);
+            this.cbxPlan.Size = new System.Drawing.Size(114, 21);
             this.cbxPlan.TabIndex = 9;
             // 
             // ComisionDesktop

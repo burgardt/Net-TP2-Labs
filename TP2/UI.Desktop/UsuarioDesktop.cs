@@ -51,16 +51,7 @@ namespace UI.Desktop
 
             UsuarioLogic usuarioLogic = new UsuarioLogic();
             UsuarioSelec = usuarioLogic.GetOne(ID);
-
-            this.txtID.Text = UsuarioSelec.ID.ToString();
-            this.txtNombre.Text = UsuarioSelec.Nombre.ToString();
-            this.txtApellido.Text = UsuarioSelec.Apellido.ToString();
-            this.txtEmail.Text = UsuarioSelec.Email.ToString();
-            this.txtUsuario.Text = UsuarioSelec.NombreUsuario.ToString();
-            this.txtClave.Text = UsuarioSelec.Clave.ToString();
-            this.txtConClave.Text = UsuarioSelec.Clave.ToString();
-            this.chkHabilitado.Checked = UsuarioSelec.Habilitado;
-            this.txtPersonaId.Text = UsuarioSelec.IdPersona.ToString();
+            MapearDeDatos();
 
             if (modo == ModoForm.Modificacion)
             {
@@ -76,6 +67,7 @@ namespace UI.Desktop
                 this.txtConClave.ReadOnly = true;
                 this.chkHabilitado.AutoCheck = false;
                 this.txtPersonaId.ReadOnly = true;
+
                 this.btnAceptar.Text = "Eliminar";
             }
             else
@@ -84,7 +76,7 @@ namespace UI.Desktop
             }
         }
 
-        //METODOS-----------------------------------------------------------------------------------------------------
+
         public Usuario UsuarioSelec
         {
             set { _UsuarioSelec = value; }
@@ -96,17 +88,20 @@ namespace UI.Desktop
 
         }
 
+
         public override void MapearDeDatos()
         {
-            this.txtID.Text = this.UsuarioSelec.ID.ToString();
-            this.txtNombre.Text = this.UsuarioSelec.Nombre;
-            this.txtApellido.Text = this.UsuarioSelec.Apellido;
-            this.txtEmail.Text = this.UsuarioSelec.Email;
-            this.txtUsuario.Text = this.UsuarioSelec.NombreUsuario;
-            this.txtClave.Text = this.UsuarioSelec.Clave;
-            this.chkHabilitado.Checked = this.UsuarioSelec.Habilitado;
-            this.txtPersonaId.Text = this.UsuarioSelec.IdPersona.ToString();
+            this.txtID.Text = UsuarioSelec.ID.ToString();
+            this.txtNombre.Text = UsuarioSelec.Nombre.ToString();
+            this.txtApellido.Text = UsuarioSelec.Apellido.ToString();
+            this.txtEmail.Text = UsuarioSelec.Email.ToString();
+            this.txtUsuario.Text = UsuarioSelec.NombreUsuario.ToString();
+            this.txtClave.Text = UsuarioSelec.Clave.ToString();
+            this.txtConClave.Text = UsuarioSelec.Clave.ToString();
+            this.chkHabilitado.Checked = UsuarioSelec.Habilitado;
+            this.txtPersonaId.Text = UsuarioSelec.IdPersona.ToString();
         }
+
 
         public override void MapearADatos()
         {
@@ -148,6 +143,7 @@ namespace UI.Desktop
             }
         }
 
+
         public override bool Validar()
         {   
             bool isEmail = Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -178,6 +174,7 @@ namespace UI.Desktop
                 return true;
         }
 
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (this.Validar())
@@ -186,6 +183,7 @@ namespace UI.Desktop
                     this.Close();
             }
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
