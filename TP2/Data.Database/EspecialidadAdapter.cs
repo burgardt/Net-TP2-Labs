@@ -30,8 +30,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de especialidades", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar lista de especialidades", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -59,8 +60,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de especialidad", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar datos de especialidad", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -83,8 +85,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al actualizar datos de especialidad", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al actualizar datos de especialidad", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -105,8 +107,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al crear especialidad", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al crear especialidad", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -125,8 +127,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar especialidad", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al eliminar especialidad", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {

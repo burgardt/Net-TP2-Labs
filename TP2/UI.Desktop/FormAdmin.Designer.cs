@@ -120,6 +120,7 @@
             this.aBMComisionesToolStripMenuItem.Name = "aBMComisionesToolStripMenuItem";
             this.aBMComisionesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.aBMComisionesToolStripMenuItem.Text = "ABM Comisiones";
+            this.aBMComisionesToolStripMenuItem.Click += new System.EventHandler(this.aBMComisionesToolStripMenuItem_Click);
             // 
             // aBMCursosToolStripMenuItem
             // 

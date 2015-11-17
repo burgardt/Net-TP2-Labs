@@ -18,32 +18,37 @@ namespace UI.Desktop
 
         private void aBMCPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPersonas fp = new FormPersonas();
-            fp.ShowDialog();
+            FormPersonas formPersonas = new FormPersonas();
+            formPersonas.ShowDialog();
         }
 
         private void aBMCUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormUsuarios fu = new FormUsuarios(); 
-            fu.ShowDialog();
+            FormUsuarios formUsuarios = new FormUsuarios(); 
+            formUsuarios.ShowDialog();
+        }
+
+        private void aBMCEspecialidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEspecialidades formEspecialidades = new FormEspecialidades();
+            formEspecialidades.ShowDialog();
+        }
+
+        private void aBMPlanesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPlanes formPlanes = new FormPlanes();
+            formPlanes.ShowDialog();
+        }
+
+        private void aBMComisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormComisiones formComisiones = new FormComisiones();
+            formComisiones.ShowDialog();
         }
 
         private void tsbSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void aBMCEspecialidadesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormEspecialidades fe = new FormEspecialidades();
-            fe.ShowDialog();
-        }
-
-        private void aBMPlanesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormPlanes fp = new FormPlanes();
-            fp.ShowDialog();
-        }
-
     }
 }

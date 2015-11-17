@@ -19,11 +19,115 @@ namespace UI.Desktop
             this.dgvPersonas.AutoGenerateColumns = false;
         }
 
+        public struct Fila
+        {
+            private int _id;
+            private string _nombre;
+            private string _apellido;
+            private string _direccion;
+            private string _email;
+            private string _telefono;
+            private DateTime _fechaNacimiento;
+            private int _legajo;
+            private string _tipoPersona;
+            private string _plan;
+
+            public int ID
+            {
+                get { return _id; }
+                set { _id = value; }
+            }
+            
+            public string Nombre
+            {
+                get { return _nombre; }
+                set { _nombre = value; }
+            }
+            
+            public string Apellido
+            {
+                get { return _apellido; }
+                set { _apellido = value; }
+            }
+            
+            public string Direccion
+            {
+                get { return _direccion; }
+                set { _direccion = value; }
+            }
+   
+            public string Email
+            {
+                get { return _email; }
+                set { _email = value; }
+            }
+    
+            public string Telefono
+            {
+                get { return _telefono; }
+                set { _telefono = value; }
+            }
+
+            public DateTime FechaNacimiento
+            {
+                get { return _fechaNacimiento; }
+                set { _fechaNacimiento = value; }
+            }
+
+            public int Legajo
+            {
+                get { return _legajo; }
+                set { _legajo = value; }
+            }
+
+            public string TipoPersona
+            {
+                get { return _tipoPersona; }
+                set { _tipoPersona = value; }
+            }
+
+            public string Plan
+            {
+                get { return _plan; }
+                set { _plan = value; }
+            }
+        }
+
         //METODOS------------------------------------------------------------------------------------------------------
         public void Listar()
         {
-            PersonaLogic pl = new PersonaLogic();
-            this.dgvPersonas.DataSource= pl.GetAll();
+            PersonaLogic personaLogic = new PersonaLogic();
+            List<Persona> personas = personaLogic.GetAll();
+            PlanLogic planLogic= new PlanLogic();
+
+            List<Fila> filas = new List<Fila>();
+            foreach (Persona persona in personas)
+            {
+                Fila fila = new Fila();
+                fila.ID = persona.ID;
+                fila.Nombre = persona.Nombre;
+                fila.Apellido = persona.Apellido;
+                fila.Direccion = persona.Direccion;
+                fila.Email = persona.Email;
+                fila.Telefono = persona.Telefono;
+                fila.FechaNacimiento = persona.FechaNacimiento;
+                fila.Legajo = persona.Legajo;
+                if (persona.TipoPersona == 0)
+                {
+                    fila.TipoPersona = "Profesor";
+                }
+                else if (persona.TipoPersona == 1)
+                {
+                    fila.TipoPersona = "Alumno";
+                }
+                else
+                {
+                    fila.TipoPersona = "Administrador";
+                }
+                fila.Plan = planLogic.GetOne(persona.IDPlan).Descripcion;
+                filas.Add(fila);
+            }
+            this.dgvPersonas.DataSource = filas;
         }
 
         //EVENTOS--------------------------------------------------------------------------------------------------------
@@ -45,8 +149,8 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-           PersonaDesktop ud = new PersonaDesktop(ModoForm.Alta);
-            ud.ShowDialog();
+           PersonaDesktop personaDesktop = new PersonaDesktop(ModoForm.Alta);
+            personaDesktop.ShowDialog();
             this.Listar();
         }
 
@@ -54,9 +158,9 @@ namespace UI.Desktop
         {
             try
             {
-                int id = ((Persona)this.dgvPersonas.SelectedRows[0].DataBoundItem).ID;
-                PersonaDesktop ud = new PersonaDesktop(id, ModoForm.Modificacion);
-                ud.ShowDialog();
+                int id = ((Fila)this.dgvPersonas.SelectedRows[0].DataBoundItem).ID;
+                PersonaDesktop personaDesktop = new PersonaDesktop(id, ModoForm.Modificacion);
+                personaDesktop.ShowDialog();
                 this.Listar();
             }
             catch (ArgumentOutOfRangeException)
@@ -69,9 +173,9 @@ namespace UI.Desktop
         {
             try
             {
-                int id = ((Persona)this.dgvPersonas.SelectedRows[0].DataBoundItem).ID;
-                PersonaDesktop ud = new PersonaDesktop(id, ModoForm.Baja);
-                ud.ShowDialog();
+                int id = ((Fila)this.dgvPersonas.SelectedRows[0].DataBoundItem).ID;
+                PersonaDesktop personaDesktop = new PersonaDesktop(id, ModoForm.Baja);
+                personaDesktop.ShowDialog();
                 this.Listar();
             }
             catch (ArgumentOutOfRangeException)

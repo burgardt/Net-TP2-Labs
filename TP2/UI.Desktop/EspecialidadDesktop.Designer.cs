@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpEspecialidad = new System.Windows.Forms.TableLayoutPanel();
             this.lblId = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpEspecialidad.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpEspecialidad
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
-            this.tableLayoutPanel1.Controls.Add(this.lblId, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblDescripcion, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(376, 82);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpEspecialidad.ColumnCount = 3;
+            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.06383F));
+            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.69149F));
+            this.tlpEspecialidad.Controls.Add(this.lblId, 0, 0);
+            this.tlpEspecialidad.Controls.Add(this.lblDescripcion, 0, 1);
+            this.tlpEspecialidad.Controls.Add(this.txtID, 1, 0);
+            this.tlpEspecialidad.Controls.Add(this.txtDescripcion, 1, 1);
+            this.tlpEspecialidad.Controls.Add(this.btnCancelar, 2, 2);
+            this.tlpEspecialidad.Controls.Add(this.btnAceptar, 1, 2);
+            this.tlpEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpEspecialidad.Location = new System.Drawing.Point(0, 0);
+            this.tlpEspecialidad.Name = "tlpEspecialidad";
+            this.tlpEspecialidad.RowCount = 3;
+            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidad.Size = new System.Drawing.Size(376, 82);
+            this.tlpEspecialidad.TabIndex = 0;
             // 
             // lblId
             // 
             this.lblId.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(48, 6);
+            this.lblId.Location = new System.Drawing.Point(104, 6);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(3, 32);
+            this.lblDescripcion.Location = new System.Drawing.Point(59, 32);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 1;
@@ -83,25 +83,25 @@
             // txtID
             // 
             this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtID.Location = new System.Drawing.Point(72, 3);
+            this.txtID.Location = new System.Drawing.Point(128, 3);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(91, 20);
             this.txtID.TabIndex = 2;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel1.SetColumnSpan(this.txtDescripcion, 2);
-            this.txtDescripcion.Location = new System.Drawing.Point(72, 29);
+            this.tlpEspecialidad.SetColumnSpan(this.txtDescripcion, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(128, 29);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(300, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(245, 20);
             this.txtDescripcion.TabIndex = 3;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.Location = new System.Drawing.Point(238, 55);
+            this.btnCancelar.Location = new System.Drawing.Point(261, 55);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -111,7 +111,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.Location = new System.Drawing.Point(84, 55);
+            this.btnAceptar.Location = new System.Drawing.Point(136, 55);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 4;
@@ -124,22 +124,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 82);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpEspecialidad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "EspecialidadDesktop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Especialidad";
             this.Load += new System.EventHandler(this.EspecialidadDesktop_Load);
-            this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Controls.SetChildIndex(this.tlpEspecialidad, 0);
+            this.tlpEspecialidad.ResumeLayout(false);
+            this.tlpEspecialidad.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpEspecialidad;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtID;

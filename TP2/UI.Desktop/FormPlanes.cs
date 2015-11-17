@@ -46,13 +46,9 @@ namespace UI.Desktop
         public void Listar()
         {
           
-            PlanLogic pl = new PlanLogic();
-            List<Plan> planes = new List<Plan>();
-            planes = pl.GetAll();
-
-            EspecialidadLogic el = new EspecialidadLogic();
-            List<Especialidad> especialidades = new List<Especialidad>();
-            especialidades = el.GetAll();
+            PlanLogic planLogic = new PlanLogic();
+            List<Plan> planes = planLogic.GetAll();
+            EspecialidadLogic especialidadLogic = new EspecialidadLogic();
 
             List<Fila> filas = new List<Fila>();
             foreach (Plan plan in planes)
@@ -60,13 +56,7 @@ namespace UI.Desktop
                 Fila fila = new Fila();
                 fila.ID = plan.ID;
                 fila.Descripcion = plan.Descripcion;
-                foreach (Especialidad especialidad in especialidades)
-                {
-                    if (plan.IDEspecialidad == especialidad.ID)
-                    {
-                        fila.Especialidad = especialidad.Descripcion;
-                    }
-                }
+                fila.Especialidad = especialidadLogic.GetOne(plan.IDEspecialidad).Descripcion;
                 filas.Add(fila);
             }
             
@@ -77,8 +67,8 @@ namespace UI.Desktop
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            PlanDesktop pd = new PlanDesktop(ModoForm.Alta);
-            pd.ShowDialog();
+            PlanDesktop planDesktop = new PlanDesktop(ModoForm.Alta);
+            planDesktop.ShowDialog();
             this.Listar();
         }
 
@@ -87,8 +77,8 @@ namespace UI.Desktop
             try
             {
                 int id = ((Fila)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
-                PlanDesktop pd= new PlanDesktop(id, ModoForm.Modificacion);
-                pd.ShowDialog();
+                PlanDesktop planDesktop= new PlanDesktop(id, ModoForm.Modificacion);
+                planDesktop.ShowDialog();
                 this.Listar();
             }
             catch (ArgumentOutOfRangeException)

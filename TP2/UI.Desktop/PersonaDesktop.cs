@@ -15,15 +15,15 @@ namespace UI.Desktop
     public partial class PersonaDesktop : ApplicationForm
     {
         //VARIABLES----------------------------------------------------------------------------------------------------
-        private Persona _PersonaActual;
+        private Persona _PersonaSelec;
         public List<Plan> listaPlanes;
-        public PlanLogic pl;
+        public PlanLogic planLogic;
 
        //CONSTRUCTORES--------------------------------------------------------------------------------------------------
         public PersonaDesktop()
         {
             InitializeComponent();
-            _PersonaActual = new Persona();
+            PersonaSelec = new Persona();
         }
 
 
@@ -38,21 +38,10 @@ namespace UI.Desktop
             : this()
         {
             this.Modo=modo;
-            PersonaLogic pl= new PersonaLogic();
-            PersonaActual = pl.GetOne(ID);
 
-            this.txtID.Text = PersonaActual.ID.ToString();
-            this.txtNombre.Text = PersonaActual.Nombre.ToString();
-            this.txtApellido.Text = PersonaActual.Apellido.ToString();
-            this.txtDireccion.Text = PersonaActual.Direccion.ToString();
-            this.txtEmail.Text = PersonaActual.Email.ToString();
-            this.txtTelefono.Text = PersonaActual.Telefono.ToString();
-            this.cbxDia.Text = PersonaActual.FechaNacimiento.Day.ToString();
-            this.cbxMes.SelectedIndex = PersonaActual.FechaNacimiento.Month - 1;
-            this.cbxAnio.Text = PersonaActual.FechaNacimiento.Year.ToString();
-            this.txtLegajo.Text = PersonaActual.Legajo.ToString();
-            this.cbxTipo.SelectedIndex = PersonaActual.TipoPersona;
-            this.cbxPlan.SelectedValue = PersonaActual.IDPlan;
+            PersonaLogic personaLogic= new PersonaLogic();
+            PersonaSelec = personaLogic.GetOne(ID);
+            MapearDeDatos();
 
             if (modo == ModoForm.Modificacion)
             {
@@ -81,99 +70,85 @@ namespace UI.Desktop
         }
 
         //METODOS-----------------------------------------------------------------------------------------------------
-        public Persona PersonaActual
+        public Persona PersonaSelec
         {
-            set { _PersonaActual = value; }
-            get { return _PersonaActual; }
+            set { _PersonaSelec = value; }
+            get { return _PersonaSelec; }
         }
 
 
         private void PersonaDesktop_Load(object sender, EventArgs e)
         {
-            pl = new PlanLogic();
-            listaPlanes = pl.GetAll();
-
-            foreach (Plan plan in listaPlanes)
-            {
-                this.cbxPlan.DataSource = pl.GetAll();
-                this.cbxPlan.ValueMember = "ID";
-                this.cbxPlan.DisplayMember = "Descripcion";
-
-            }
-
-            this.cbxAnio.SelectedIndex = 0;
-        }
-
-
-        public override void MapearADatos()
-        {
-            int anio = int.Parse(this.cbxAnio.Text.ToString());
-            int mes = this.cbxMes.SelectedIndex + 1;
-            int dia = int.Parse(this.cbxDia.Text.ToString());
-
-            if (Modo == ModoForm.Alta)
-            {
-                Persona persona = new Persona();
-                PersonaActual = persona;
-                PersonaActual.State = BusinessEntity.States.New;
-            }
-            else
-            {
-                PersonaActual.State = BusinessEntity.States.Modified;
-            }
-
-            if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
-            {
-                
-                DateTime fechaNac= new DateTime(anio, mes, dia);
-                string[] plan = this.cbxPlan.Text.Split('-');
-                PersonaActual.Nombre = this.txtNombre.Text;
-                PersonaActual.Apellido = this.txtApellido.Text;
-                PersonaActual.Direccion = this.txtDireccion.Text;
-                PersonaActual.Email = this.txtEmail.Text;
-                PersonaActual.Telefono= this.txtTelefono.Text;
-                PersonaActual.FechaNacimiento = fechaNac;
-                PersonaActual.Legajo = Convert.ToInt32(int.Parse(this.txtLegajo.Text));
-                PersonaActual.IDPlan = int.Parse(this.cbxPlan.SelectedValue.ToString());
-                PersonaActual.TipoPersona = this.cbxTipo.SelectedIndex;
-
-               }
+            planLogic = new PlanLogic();
+            this.cbxPlan.DataSource = planLogic.GetAll();
+            this.cbxPlan.ValueMember = "ID";
+            this.cbxPlan.DisplayMember = "Descripcion";
         }
 
 
         public override void MapearDeDatos()
         {
-            this.txtID.Text = PersonaActual.ID.ToString();
-            this.txtNombre.Text = PersonaActual.Nombre.ToString();
-            this.txtApellido.Text = PersonaActual.Apellido.ToString();
-            this.txtDireccion.Text = PersonaActual.Direccion.ToString();
-            this.txtEmail.Text = PersonaActual.Email.ToString();
-            this.txtTelefono.Text = PersonaActual.Telefono.ToString();
-            this.cbxDia.SelectedValue = PersonaActual.FechaNacimiento.Day;
-            this.cbxMes.SelectedValue = PersonaActual.FechaNacimiento.Month;
-            this.cbxAnio.SelectedValue = PersonaActual.FechaNacimiento.Year;
-            this.txtLegajo.Text = PersonaActual.Legajo.ToString();
-            // this.cbxTipo.SelectedValue = (int)PersonaActual.TipoPersona;
-            // this.cbxPlan.
+            this.txtID.Text = PersonaSelec.ID.ToString();
+            this.txtNombre.Text = PersonaSelec.Nombre.ToString();
+            this.txtApellido.Text = PersonaSelec.Apellido.ToString();
+            this.txtDireccion.Text = PersonaSelec.Direccion.ToString();
+            this.txtEmail.Text = PersonaSelec.Email.ToString();
+            this.txtTelefono.Text = PersonaSelec.Telefono.ToString();
+            this.cbxDia.Text = PersonaSelec.FechaNacimiento.Day.ToString();
+            this.cbxMes.SelectedIndex = PersonaSelec.FechaNacimiento.Month - 1;
+            this.cbxAnio.Text = PersonaSelec.FechaNacimiento.Year.ToString();
+            this.txtLegajo.Text = PersonaSelec.Legajo.ToString();
+            this.cbxTipo.SelectedIndex = PersonaSelec.TipoPersona;
+            this.cbxPlan.SelectedValue = PersonaSelec.IDPlan; //no lo setea preguntar al profE
+        }
+
+
+        public override void MapearADatos()
+        {
+            if (Modo == ModoForm.Alta)
+            {
+                PersonaSelec.State = BusinessEntity.States.New;
+            }
+            else
+            {
+                PersonaSelec.State = BusinessEntity.States.Modified;
+            }
+
+            int anio = int.Parse(this.cbxAnio.Text.ToString());
+            int mes = this.cbxMes.SelectedIndex + 1;
+            int dia = int.Parse(this.cbxDia.Text.ToString());
+
+            DateTime fechaNac= new DateTime(anio, mes, dia);
+            PersonaSelec.Nombre = this.txtNombre.Text;
+            PersonaSelec.Apellido = this.txtApellido.Text;
+            PersonaSelec.Direccion = this.txtDireccion.Text;
+            PersonaSelec.Email = this.txtEmail.Text;
+            PersonaSelec.Telefono= this.txtTelefono.Text;
+            PersonaSelec.FechaNacimiento = fechaNac;
+            PersonaSelec.Legajo = Convert.ToInt32(int.Parse(this.txtLegajo.Text));
+            PersonaSelec.IDPlan = (int) this.cbxPlan.SelectedValue;
+            PersonaSelec.TipoPersona = this.cbxTipo.SelectedIndex;
         }
 
 
         public override void GuardarCambios()
         {
-            PersonaLogic pl = new PersonaLogic();
+            PersonaLogic personaLogic = new PersonaLogic();
             if (Modo == ModoForm.Modificacion || Modo == ModoForm.Alta)
             {
                 MapearADatos();
-                pl.Save(PersonaActual);
+                personaLogic.Save(PersonaSelec);
 
                 if (Modo == ModoForm.Alta)
                 {
-                    UsuarioLogic ul = new UsuarioLogic();
-                    List<Usuario> usuarios = ul.GetAll();
+                    UsuarioLogic usuarioLogic = new UsuarioLogic();
+                    List<Usuario> usuarios = usuarioLogic.GetAll();
+                    // valida que la persona este logueada como usuario.
+                    // igual medio al pedo que valide porque entre siempre
                     bool logueaUsuario = true;
                     foreach (Usuario usuario in usuarios)
                     {
-                        if (PersonaActual.ID == usuario.IdPersona)
+                        if (PersonaSelec.ID == usuario.IdPersona)
                         {
                             logueaUsuario = false;
                         }
@@ -181,14 +156,14 @@ namespace UI.Desktop
                     if (logueaUsuario)
                     {
                         MessageBox.Show("La persona no esta registrada como usuario del sistema. Complete los datos de usuario a continuación");
-                        UsuarioDesktop ud = new UsuarioDesktop(PersonaActual.ID);
+                        UsuarioDesktop ud = new UsuarioDesktop(PersonaSelec.ID);
                         ud.ShowDialog();
                     }
                 }
             }
             else
             {
-                pl.Delete(PersonaActual.ID);
+                personaLogic.Delete(PersonaSelec.ID);
             }
         }
 
@@ -196,16 +171,20 @@ namespace UI.Desktop
         public override bool Validar()
         {   
             bool isEmail = Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            bool isInt = Regex.IsMatch(this.txtLegajo.Text, @"/^[0-9]+$/");
+            bool legajoIsInt = Regex.IsMatch(this.txtLegajo.Text, @"/^[0-9]+$/");
             
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty ||
                 this.txtEmail.Text == string.Empty || this.txtDireccion.Text == string.Empty ||
-                this.txtTelefono.Text == string.Empty || this.txtLegajo.Text == string.Empty /*||
-                this.cbxAnio.SelectedIndex == -1 || this.cbxMes.SelectedIndex == -1 ||
-                this.cbxDia.SelectedIndex == -1 || this.cbxPlan.SelectedIndex == -1 ||
-                this.cbxPlan.SelectedIndex == -1*/)
+                this.txtTelefono.Text == string.Empty || this.txtLegajo.Text == string.Empty)
             {
-                MessageBox.Show("Alguno de los campos esta vacio o no se han seleccionado valores");
+                MessageBox.Show("Alguno de los campos esta vacio");
+                return false;
+            }
+            else if (this.cbxAnio.SelectedIndex == -1 || this.cbxMes.SelectedIndex == -1 ||
+                this.cbxDia.SelectedIndex == -1 || this.cbxPlan.SelectedValue == null ||
+                this.cbxTipo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Algunos valores no han sido seleccionados");
                 return false;
             }
             else if (!isEmail)
@@ -213,14 +192,32 @@ namespace UI.Desktop
                 MessageBox.Show("Email no tiene un formato valido");
                 return false;
             }
-            else if (!isInt && this.txtLegajo.Text.Length>8)
+            else if (!legajoIsInt && this.txtLegajo.Text.Length>8)
             {
                 MessageBox.Show("El legajo debe contener solo numeros y no debe superar los 8 caracteres");
                 return false;
             }
+            else if ((cbxMes.SelectedIndex == 3 || cbxMes.SelectedIndex == 5 || cbxMes.SelectedIndex == 8 || cbxMes.SelectedIndex == 10) 
+                && cbxDia.Text == "31")
+            {
+                    MessageBox.Show("la fecha de nacimiento seleccionada no es valida");
+                    return false;
+            }
+            else if (cbxMes.SelectedIndex == 1 && (cbxDia.Text == "29" || cbxDia.Text == "30" || cbxDia.Text == "31"))
+            {
+                if (cbxDia.Text == "29" && int.Parse(cbxAnio.Text) % 4 == 0 && int.Parse(cbxAnio.Text) % 100 != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("la fecha de nacimiento seleccionada no es valida");
+                    return false;
+                }
+            }
             else
                 return true;
-        }
+        }	
 
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -238,51 +235,5 @@ namespace UI.Desktop
             this.Close();
         }
 
-
-        private void cbxMes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (this.cbxMes.SelectedIndex == 0 || this.cbxMes.SelectedIndex == 2 || this.cbxMes.SelectedIndex == 4 ||
-                this.cbxMes.SelectedIndex == 6 || this.cbxMes.SelectedIndex == 7 || this.cbxMes.SelectedIndex == 9 ||
-                this.cbxMes.SelectedIndex == 11) 
-            {
-                cbxDia.Items.Clear();
-                for (int i = 1; i <= 31; i++)
-                {
-                    cbxDia.Items.Add(i);
-                }
-            }
-            else if (this.cbxMes.SelectedIndex == 3 || this.cbxMes.SelectedIndex == 5 || this.cbxMes.SelectedIndex == 8 ||
-                this.cbxMes.SelectedIndex == 10)
-            {
-                cbxDia.Items.Clear();
-                for (int i = 1; i <= 30; i++)
-                {
-                    cbxDia.Items.Add(i);
-                }
-            }
-            else if (this.cbxMes.SelectedIndex == 1)
-            {
-                cbxDia.Items.Clear();
-                int anio = int.Parse(this.cbxAnio.SelectedItem.ToString());
-                if (anio%4 == 0 && anio%100 != 0)
-                {
-                    for (int i = 1; i <= 29; i++)
-                    {
-                        cbxDia.Items.Add(i);
-                    }
-                }
-                else
-                {
-                    for (int i = 1; i <= 28; i++)
-                    {
-                        cbxDia.Items.Add(i);
-                    }
-                }
-            }
-            else
-            {
-                cbxDia.Items.Clear();
-            }
-        }
     }
 }

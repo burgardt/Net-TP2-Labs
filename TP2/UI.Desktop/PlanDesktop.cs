@@ -13,22 +13,21 @@ namespace UI.Desktop
 {
     public partial class PlanDesktop : ApplicationForm
     {
-        private Plan _PlanSelec = new Plan();
+        private Plan _PlanSelec;
         public List<Especialidad> listaEspecialidades;
         public EspecialidadLogic el;
 
         public PlanDesktop()
         {
             InitializeComponent();
+            _PlanSelec = new Plan();
         }
-
 
         public PlanDesktop(ModoForm modo)
             : this()
         {
             this.Modo = modo;
         }
-
 
         public PlanDesktop(int ID, ModoForm modo)
             : this()
@@ -41,35 +40,17 @@ namespace UI.Desktop
 
             PlanLogic pl = new PlanLogic();
             PlanSelec = pl.GetOne(ID);
+            MapearDeDatos();
 
             if (modo == ModoForm.Modificacion)
             {
-                this.txtID.Text = PlanSelec.ID.ToString();
-                this.txtID.ReadOnly = true;
-                this.txtDescripcion.Text = PlanSelec.Descripcion;
-                this.cbxEspecialidad.SelectedItem = 1;
-                foreach (Especialidad esp in listaEspecialidades)
-                {
-                    if (PlanSelec.IDEspecialidad == esp.ID)
-                    {
-                        this.cbxEspecialidad.Text = esp.Descripcion;
-                    }
-                }
+                this.btnAceptar.Text = "Guardar";
             }
             else if (modo == ModoForm.Baja)
             {
-                this.txtID.Text = PlanSelec.ID.ToString();
-                this.txtID.ReadOnly = true;
-                this.txtDescripcion.Text = PlanSelec.Descripcion;
                 this.txtDescripcion.ReadOnly = true;
-                foreach (Especialidad esp in listaEspecialidades)
-                {
-                    if (PlanSelec.IDEspecialidad == esp.ID)
-                    {
-                        this.cbxEspecialidad.Text = esp.Descripcion;
-                    }
-                }
                 this.cbxEspecialidad.Enabled = false;
+                this.btnAceptar.Text = "Eliminar";
             }           
         }
 
@@ -83,13 +64,7 @@ namespace UI.Desktop
         {
             this.txtID.Text = this.PlanSelec.ID.ToString();
             this.txtDescripcion.Text = this.PlanSelec.Descripcion;
-            foreach (Especialidad esp in listaEspecialidades)
-            {
-                if (PlanSelec.IDEspecialidad == esp.ID)
-                {
-                    this.cbxEspecialidad.SelectedText = esp.Descripcion;
-                }
-            }
+            this.cbxEspecialidad.SelectedValue = this.PlanSelec.IDEspecialidad;
         }
 
 
@@ -108,14 +83,8 @@ namespace UI.Desktop
 
                 if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
                 {
-                    this.PlanSelec.Descripcion = this.txtDescripcion.Text;
-                    foreach (Especialidad esp in listaEspecialidades)
-                    {
-                        if (cbxEspecialidad.SelectedItem.ToString() == esp.Descripcion)
-                        {
-                            this.PlanSelec.IDEspecialidad = esp.ID;
-                        }
-                    }
+                    PlanSelec.Descripcion = this.txtDescripcion.Text;
+                    PlanSelec.IDEspecialidad = (int)cbxEspecialidad.SelectedValue;
                 }
         }
 
@@ -152,8 +121,7 @@ namespace UI.Desktop
             else
             {
                 return true;
-            }
-                
+            }              
         }
 
 //EVENTOS-------------------------------------------------------------------------------------------------------------
@@ -176,11 +144,9 @@ namespace UI.Desktop
         private void PlanDesktop_Load(object sender, EventArgs e)
         {
             el = new EspecialidadLogic();
-            listaEspecialidades = el.GetAll();
-            foreach (Especialidad esp in listaEspecialidades)
-            {
-                this.cbxEspecialidad.Items.Add(esp.Descripcion);
-            }
+            this.cbxEspecialidad.DataSource = el.GetAll();
+            this.cbxEspecialidad.ValueMember = "ID";
+            this.cbxEspecialidad.DisplayMember = "Descripcion";
         }
     }
 }

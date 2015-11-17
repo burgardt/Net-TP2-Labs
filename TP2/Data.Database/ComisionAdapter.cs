@@ -31,8 +31,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de comisiones", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar lista de comisiones", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -54,16 +55,17 @@ namespace Data.Database
                 if (drComisiones.Read())
                 {
                     comision.ID = (int)drComisiones["id_comision"];
-                    comision.Descripcion = (string)drComisiones["desc_materia"];
-                    comision.AnioEspecialidad = (int)drComisiones["anio_comision"];
+                    comision.Descripcion = (string)drComisiones["desc_comision"];
+                    comision.AnioEspecialidad = (int)drComisiones["anio_especialidad"];
                     comision.IDPlan = (int)drComisiones["id_plan"];
                 }
                 drComisiones.Close();
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de comision", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar datos de comision", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -79,16 +81,17 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdUpdate = new SqlCommand("UPDATE comisiones SET desc_comision=@desc_comision," +
-                    " id_plan=@id_plan WHERE id_comision=@id", SqlConn);
+                    "anio_especialidad=@anio_especialidad ,id_plan=@id_plan WHERE id_comision=@id", SqlConn);
                 cmdUpdate.Parameters.Add("@id", SqlDbType.Int).Value = comision.ID;
+                cmdUpdate.Parameters.Add("@anio_especialidad", SqlDbType.Int).Value = comision.AnioEspecialidad;
                 cmdUpdate.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
                 cmdUpdate.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;
                 cmdUpdate.ExecuteNonQuery();
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al actualizar datos de comision", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al actualizar datos de comision", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -102,16 +105,17 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdInsert = new SqlCommand("INSERT INTO comisiones(desc_comision, id_plan) "+
-                    "VALUES(@desc_comision, @id_plan) SELECT @@identity", SqlConn);
-                cmdInsert.Parameters.Add("@desc_materia", SqlDbType.VarChar, 50).Value = comision.Descripcion;
+                SqlCommand cmdInsert = new SqlCommand("INSERT INTO comisiones(desc_comision, anio_especialidad, id_plan) "+
+                    "VALUES(@desc_comision,@anio_especialidad, @id_plan) SELECT @@identity", SqlConn);
+                cmdInsert.Parameters.Add("@desc_comision", SqlDbType.VarChar, 50).Value = comision.Descripcion;
+                cmdInsert.Parameters.Add("@anio_especialidad", SqlDbType.Int).Value = comision.AnioEspecialidad;
                 cmdInsert.Parameters.Add("@id_plan", SqlDbType.Int).Value = comision.IDPlan;
                 comision.ID = Decimal.ToInt32((decimal)cmdInsert.ExecuteScalar());
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al crear comision", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al crear comision", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -131,8 +135,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar comision", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al eliminar comision", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {

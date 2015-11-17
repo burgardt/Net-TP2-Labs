@@ -38,8 +38,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de personas", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar lista de personas", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -75,8 +76,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de persona", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar datos de persona", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -108,8 +110,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al actualizar datos de persona", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al actualizar datos de persona", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -139,8 +141,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al cargar persona", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al cargar persona", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -159,8 +161,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar persona", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al eliminar persona", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {

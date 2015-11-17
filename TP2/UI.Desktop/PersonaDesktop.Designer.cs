@@ -214,7 +214,6 @@
             this.cbxMes.Name = "cbxMes";
             this.cbxMes.Size = new System.Drawing.Size(141, 21);
             this.cbxMes.TabIndex = 8;
-            this.cbxMes.SelectedIndexChanged += new System.EventHandler(this.cbxMes_SelectedIndexChanged);
             // 
             // cbxAnio
             // 

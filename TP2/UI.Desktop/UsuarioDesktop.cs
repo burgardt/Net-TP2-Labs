@@ -15,12 +15,13 @@ namespace UI.Desktop
     public partial class UsuarioDesktop : ApplicationForm
     {
         //VARIABLES----------------------------------------------------------------------------------------------------
-        private Usuario _UsuarioActual = new Usuario();
+        private Usuario _UsuarioSelec;
 
         //CONSTRUCTORES--------------------------------------------------------------------------------------------------
         public UsuarioDesktop(int personaId)
         {
             InitializeComponent();
+            UsuarioSelec = new Usuario();
             this.txtPersonaId.Text = personaId.ToString();
             this.txtPersonaId.ReadOnly = true;
         }
@@ -29,6 +30,10 @@ namespace UI.Desktop
         public UsuarioDesktop()
         {
             InitializeComponent();
+            UsuarioSelec = new Usuario();
+            this.txtPersonaId.Text = "0";
+            this.lblPersonaId.Visible = false;
+            this.txtPersonaId.Visible = false;
         }
 
 
@@ -43,17 +48,19 @@ namespace UI.Desktop
             : this()
         {
             this.Modo=modo;
-            UsuarioLogic ul = new UsuarioLogic();
-            UsuarioActual = ul.GetOne(ID);
-            this.txtID.Text = UsuarioActual.ID.ToString();
-            this.txtNombre.Text = UsuarioActual.Nombre.ToString();
-            this.txtApellido.Text = UsuarioActual.Apellido.ToString();
-            this.txtEmail.Text = UsuarioActual.Email.ToString();
-            this.txtUsuario.Text = UsuarioActual.NombreUsuario.ToString();
-            this.txtClave.Text = UsuarioActual.Clave.ToString();
-            this.txtConClave.Text = UsuarioActual.Clave.ToString();
-            this.chkHabilitado.Checked = UsuarioActual.Habilitado;
-            this.txtPersonaId.Text = UsuarioActual.IdPersona.ToString();
+
+            UsuarioLogic usuarioLogic = new UsuarioLogic();
+            UsuarioSelec = usuarioLogic.GetOne(ID);
+
+            this.txtID.Text = UsuarioSelec.ID.ToString();
+            this.txtNombre.Text = UsuarioSelec.Nombre.ToString();
+            this.txtApellido.Text = UsuarioSelec.Apellido.ToString();
+            this.txtEmail.Text = UsuarioSelec.Email.ToString();
+            this.txtUsuario.Text = UsuarioSelec.NombreUsuario.ToString();
+            this.txtClave.Text = UsuarioSelec.Clave.ToString();
+            this.txtConClave.Text = UsuarioSelec.Clave.ToString();
+            this.chkHabilitado.Checked = UsuarioSelec.Habilitado;
+            this.txtPersonaId.Text = UsuarioSelec.IdPersona.ToString();
 
             if (modo == ModoForm.Modificacion)
             {
@@ -78,22 +85,27 @@ namespace UI.Desktop
         }
 
         //METODOS-----------------------------------------------------------------------------------------------------
-        public Usuario UsuarioActual
+        public Usuario UsuarioSelec
         {
-            set { _UsuarioActual = value; }
-            get { return _UsuarioActual; }
+            set { _UsuarioSelec = value; }
+            get { return _UsuarioSelec; }
+        }
+
+        private void UsuarioDesktop_Load(object sender, EventArgs e)
+        {
+
         }
 
         public override void MapearDeDatos()
         {
-            this.txtID.Text = this.UsuarioActual.ID.ToString();
-            this.txtNombre.Text = this.UsuarioActual.Nombre;
-            this.txtApellido.Text = this.UsuarioActual.Apellido;
-            this.txtEmail.Text = this.UsuarioActual.Email;
-            this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;
-            this.txtClave.Text = this.UsuarioActual.Clave;
-            this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
-            this.txtPersonaId.Text = this.UsuarioActual.IdPersona.ToString();
+            this.txtID.Text = this.UsuarioSelec.ID.ToString();
+            this.txtNombre.Text = this.UsuarioSelec.Nombre;
+            this.txtApellido.Text = this.UsuarioSelec.Apellido;
+            this.txtEmail.Text = this.UsuarioSelec.Email;
+            this.txtUsuario.Text = this.UsuarioSelec.NombreUsuario;
+            this.txtClave.Text = this.UsuarioSelec.Clave;
+            this.chkHabilitado.Checked = this.UsuarioSelec.Habilitado;
+            this.txtPersonaId.Text = this.UsuarioSelec.IdPersona.ToString();
         }
 
         public override void MapearADatos()
@@ -101,38 +113,38 @@ namespace UI.Desktop
             if (Modo == ModoForm.Alta)
             {
                 Usuario usuario = new Usuario();
-                UsuarioActual = usuario;
-                UsuarioActual.State = BusinessEntity.States.New;
+                UsuarioSelec = usuario;
+                UsuarioSelec.State = BusinessEntity.States.New;
             }
             else
             {
-                UsuarioActual.State = BusinessEntity.States.Modified;
+                UsuarioSelec.State = BusinessEntity.States.Modified;
             }
 
             if (Modo == ModoForm.Alta || Modo == ModoForm.Modificacion)
             {
-                this.UsuarioActual.Nombre = this.txtNombre.Text;
-                this.UsuarioActual.Apellido = this.txtApellido.Text;
-                this.UsuarioActual.Email = this.txtEmail.Text;
-                this.UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-                this.UsuarioActual.Clave = this.txtClave.Text;
-                this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;
-                this.UsuarioActual.IdPersona = int.Parse(this.txtPersonaId.Text);
+                this.UsuarioSelec.Nombre = this.txtNombre.Text;
+                this.UsuarioSelec.Apellido = this.txtApellido.Text;
+                this.UsuarioSelec.Email = this.txtEmail.Text;
+                this.UsuarioSelec.NombreUsuario = this.txtUsuario.Text;
+                this.UsuarioSelec.Clave = this.txtClave.Text;
+                this.UsuarioSelec.Habilitado = this.chkHabilitado.Checked;
+                this.UsuarioSelec.IdPersona = int.Parse(this.txtPersonaId.Text);
             }
         }
 
+
         public override void GuardarCambios()
         {
+            UsuarioLogic usuarioLogic = new UsuarioLogic();
             if (Modo == ModoForm.Modificacion || Modo == ModoForm.Alta)
             {
                 MapearADatos();
-                UsuarioLogic ul = new UsuarioLogic();
-                ul.Save(UsuarioActual);
+                usuarioLogic.Save(UsuarioSelec);
             }
             else
             {
-                UsuarioLogic ul = new UsuarioLogic();
-                ul.Delete(UsuarioActual.ID);
+                usuarioLogic.Delete(UsuarioSelec.ID);
             }
         }
 
@@ -179,11 +191,5 @@ namespace UI.Desktop
         {
             this.Close();
         }
-
-        private void UsuarioDesktop_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

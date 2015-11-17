@@ -36,8 +36,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -73,8 +74,9 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de usuario", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al recuperar datos de usuario", Ex);
+                //throw ExcepcionManejada;
+                return null;
             }
             finally
             {
@@ -102,8 +104,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al actualizar datos de usuario", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al actualizar datos de usuario", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -131,8 +133,8 @@ namespace Data.Database
             }
             catch (Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al crear usuario", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al crear usuario", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {
@@ -152,8 +154,8 @@ namespace Data.Database
             }
             catch(Exception Ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al eliminar usuario", Ex);
-                throw ExcepcionManejada;
+                //Exception ExcepcionManejada = new Exception("Error al eliminar usuario", Ex);
+                //throw ExcepcionManejada;
             }
             finally
             {

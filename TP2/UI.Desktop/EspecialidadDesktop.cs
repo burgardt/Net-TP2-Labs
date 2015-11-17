@@ -13,11 +13,12 @@ namespace UI.Desktop
 {   
     public partial class EspecialidadDesktop : ApplicationForm
     {
-        private Especialidad _EspecialidadSelec = new Especialidad();
+        private Especialidad _EspecialidadSelec;
 
         public EspecialidadDesktop()
         {
             InitializeComponent();
+            EspecialidadSelec = new Especialidad();
         }
 
         public EspecialidadDesktop(ModoForm modo)
@@ -30,29 +31,26 @@ namespace UI.Desktop
             : this()
         {
             this.Modo = modo;
-            EspecialidadLogic el = new EspecialidadLogic();
-            EspecialidadSelec = el.GetOne(ID);
+            EspecialidadLogic especialidadLogic = new EspecialidadLogic();
+            EspecialidadSelec = especialidadLogic.GetOne(ID);
+
+            this.txtID.Text = EspecialidadSelec.ID.ToString();
+            this.txtID.ReadOnly = true;
+            this.txtDescripcion.Text = EspecialidadSelec.Descripcion;
 
             if (modo == ModoForm.Modificacion)
             {
-                this.txtID.Text = EspecialidadSelec.ID.ToString();
-                this.txtID.ReadOnly = true;
-                this.txtDescripcion.Text = EspecialidadSelec.Descripcion;
                 this.btnAceptar.Text = "Guardar";
             }
             else if (modo == ModoForm.Baja)
             {
-                this.txtID.Text = EspecialidadSelec.ID.ToString();
-                this.txtID.ReadOnly = true;
-                this.txtDescripcion.Text = EspecialidadSelec.Descripcion;
                 this.txtDescripcion.ReadOnly = true;
                 this.btnAceptar.Text = "Eliminar";
             }
             else
             {
                 this.btnAceptar.Text = "Aceptar";
-            }
-            
+            }         
         }
 
         //Metodos
@@ -61,6 +59,11 @@ namespace UI.Desktop
         {
             set { _EspecialidadSelec = value; }
             get { return _EspecialidadSelec; }
+        }
+
+        private void EspecialidadDesktop_Load(object sender, EventArgs e)
+        {
+
         }
 
         public override void MapearDeDatos()
@@ -89,16 +92,15 @@ namespace UI.Desktop
 
         public override void GuardarCambios()
         {
+            EspecialidadLogic especialidadLogic = new EspecialidadLogic();
             if (Modo == ModoForm.Modificacion || Modo == ModoForm.Alta)
             {
                 MapearADatos();
-                EspecialidadLogic el = new EspecialidadLogic();
-                el.Save(EspecialidadSelec);
+                especialidadLogic.Save(EspecialidadSelec);
             }
             else
             {
-                EspecialidadLogic el = new EspecialidadLogic();
-                el.Delete(EspecialidadSelec.ID);
+                especialidadLogic.Delete(EspecialidadSelec.ID);
             }
         }
 
@@ -125,11 +127,6 @@ namespace UI.Desktop
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void EspecialidadDesktop_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

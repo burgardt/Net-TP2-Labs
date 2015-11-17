@@ -21,14 +21,14 @@ namespace UI.Desktop
 
         public void Listar()
         {
-            EspecialidadLogic el = new EspecialidadLogic();
-            this.dgvEspecialidades.DataSource = el.GetAll();
+            EspecialidadLogic especialidadLogic = new EspecialidadLogic();
+            this.dgvEspecialidades.DataSource = especialidadLogic.GetAll();
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            EspecialidadDesktop ed = new EspecialidadDesktop(ModoForm.Alta);
-            ed.ShowDialog();
+            EspecialidadDesktop especialidadDesktop = new EspecialidadDesktop(ModoForm.Alta);
+            especialidadDesktop.ShowDialog();
             this.Listar();
         }
 
@@ -37,8 +37,8 @@ namespace UI.Desktop
             try
             {
                 int id = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-                EspecialidadDesktop ed = new EspecialidadDesktop(id, ModoForm.Modificacion);
-                ed.ShowDialog();
+                EspecialidadDesktop especialidadDesktop = new EspecialidadDesktop(id, ModoForm.Modificacion);
+                especialidadDesktop.ShowDialog();
                 this.Listar();
             }
             catch (ArgumentOutOfRangeException)
@@ -52,8 +52,8 @@ namespace UI.Desktop
             try
             {
                 int id = ((Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-                EspecialidadDesktop ed = new EspecialidadDesktop(id, ModoForm.Baja);
-                ed.ShowDialog();
+                EspecialidadDesktop especialidadDesktop = new EspecialidadDesktop(id, ModoForm.Baja);
+                especialidadDesktop.ShowDialog();
                 this.Listar();
             }
             catch (ArgumentOutOfRangeException)
