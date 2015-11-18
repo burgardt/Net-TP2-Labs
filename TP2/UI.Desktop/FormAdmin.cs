@@ -16,11 +16,13 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+
         private void aBMCPersonasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPersonas formPersonas = new FormPersonas();
             formPersonas.ShowDialog();
         }
+
 
         private void aBMCUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -28,11 +30,13 @@ namespace UI.Desktop
             formUsuarios.ShowDialog();
         }
 
+
         private void aBMCEspecialidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormEspecialidades formEspecialidades = new FormEspecialidades();
             formEspecialidades.ShowDialog();
         }
+
 
         private void aBMPlanesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -40,11 +44,20 @@ namespace UI.Desktop
             formPlanes.ShowDialog();
         }
 
+
         private void aBMComisionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormComisiones formComisiones = new FormComisiones();
             formComisiones.ShowDialog();
         }
+
+
+        private void aBMMateriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMaterias formMaterias = new FormMaterias();
+            formMaterias.ShowDialog();
+        }
+
 
         private void tsbSalir_Click(object sender, EventArgs e)
         {

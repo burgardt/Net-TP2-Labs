@@ -35,8 +35,8 @@ namespace UI.Desktop
         {
             this.Modo = modo;
 
-            ComisionLogic cl = new ComisionLogic();
-            ComisionSelec = cl.GetOne(ID);
+            ComisionLogic comisionLogic = new ComisionLogic();
+            ComisionSelec = comisionLogic.GetOne(ID);
             MapearDeDatos();
 
             if (modo == ModoForm.Modificacion)

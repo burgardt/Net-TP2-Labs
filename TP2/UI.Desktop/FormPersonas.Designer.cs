@@ -34,7 +34,7 @@
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
-            this.tlPersonas = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpFormPersonas = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.tlPersonas.SuspendLayout();
+            this.tlpFormPersonas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -97,22 +97,22 @@
             // 
             this.ContentPanel.Size = new System.Drawing.Size(867, 492);
             // 
-            // tlPersonas
+            // tlpFormPersonas
             // 
-            this.tlPersonas.ColumnCount = 2;
-            this.tlPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlPersonas.Controls.Add(this.dgvPersonas, 0, 0);
-            this.tlPersonas.Controls.Add(this.btnActualizar, 0, 1);
-            this.tlPersonas.Controls.Add(this.btnSalir, 1, 1);
-            this.tlPersonas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlPersonas.Location = new System.Drawing.Point(0, 0);
-            this.tlPersonas.Name = "tlPersonas";
-            this.tlPersonas.RowCount = 2;
-            this.tlPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlPersonas.Size = new System.Drawing.Size(1068, 493);
-            this.tlPersonas.TabIndex = 0;
+            this.tlpFormPersonas.ColumnCount = 2;
+            this.tlpFormPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFormPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormPersonas.Controls.Add(this.dgvPersonas, 0, 0);
+            this.tlpFormPersonas.Controls.Add(this.btnActualizar, 0, 1);
+            this.tlpFormPersonas.Controls.Add(this.btnSalir, 1, 1);
+            this.tlpFormPersonas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpFormPersonas.Location = new System.Drawing.Point(0, 0);
+            this.tlpFormPersonas.Name = "tlpFormPersonas";
+            this.tlpFormPersonas.RowCount = 2;
+            this.tlpFormPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFormPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormPersonas.Size = new System.Drawing.Size(1068, 493);
+            this.tlpFormPersonas.TabIndex = 0;
             // 
             // dgvPersonas
             // 
@@ -130,7 +130,7 @@
             this.legajo,
             this.tipoPersona,
             this.Plan});
-            this.tlPersonas.SetColumnSpan(this.dgvPersonas, 2);
+            this.tlpFormPersonas.SetColumnSpan(this.dgvPersonas, 2);
             this.dgvPersonas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPersonas.Location = new System.Drawing.Point(3, 3);
             this.dgvPersonas.Name = "dgvPersonas";
@@ -239,7 +239,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.tlPersonas);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.tlpFormPersonas);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1068, 493);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
@@ -306,7 +306,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Personas";
             this.Load += new System.EventHandler(this.formPersonas_Load);
-            this.tlPersonas.ResumeLayout(false);
+            this.tlpFormPersonas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).EndInit();
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
@@ -326,7 +326,7 @@
         private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
-        private System.Windows.Forms.TableLayoutPanel tlPersonas;
+        private System.Windows.Forms.TableLayoutPanel tlpFormPersonas;
         private System.Windows.Forms.DataGridView dgvPersonas;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;

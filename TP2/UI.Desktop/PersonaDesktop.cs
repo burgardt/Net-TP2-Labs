@@ -169,10 +169,7 @@ namespace UI.Desktop
 
 
         public override bool Validar()
-        {   
-            bool isEmail = Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            bool legajoIsInt = Regex.IsMatch(this.txtLegajo.Text, @"/^[0-9]+$/");
-            
+        {             
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty ||
                 this.txtEmail.Text == string.Empty || this.txtDireccion.Text == string.Empty ||
                 this.txtTelefono.Text == string.Empty || this.txtLegajo.Text == string.Empty)
@@ -187,12 +184,12 @@ namespace UI.Desktop
                 MessageBox.Show("Algunos valores no han sido seleccionados");
                 return false;
             }
-            else if (!isEmail)
+            else if (!Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) // valida si el formato del email cumple con la expresion regular
             {
                 MessageBox.Show("Email no tiene un formato valido");
                 return false;
             }
-            else if (!legajoIsInt && this.txtLegajo.Text.Length>8)
+            else if (!Regex.IsMatch(this.txtLegajo.Text, @"^[0-9]*$") || this.txtLegajo.Text.Length > 8) // valida que legajo cumpla con la expresion regular que admite solo enteros
             {
                 MessageBox.Show("El legajo debe contener solo numeros y no debe superar los 8 caracteres");
                 return false;

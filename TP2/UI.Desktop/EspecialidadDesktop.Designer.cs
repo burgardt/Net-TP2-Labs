@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tlpEspecialidad = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpEspecialidadDesktop = new System.Windows.Forms.TableLayoutPanel();
             this.lblId = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.tlpEspecialidad.SuspendLayout();
+            this.tlpEspecialidadDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tlpEspecialidad
+            // tlpEspecialidadDesktop
             // 
-            this.tlpEspecialidad.ColumnCount = 3;
-            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.06383F));
-            this.tlpEspecialidad.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.69149F));
-            this.tlpEspecialidad.Controls.Add(this.lblId, 0, 0);
-            this.tlpEspecialidad.Controls.Add(this.lblDescripcion, 0, 1);
-            this.tlpEspecialidad.Controls.Add(this.txtID, 1, 0);
-            this.tlpEspecialidad.Controls.Add(this.txtDescripcion, 1, 1);
-            this.tlpEspecialidad.Controls.Add(this.btnCancelar, 2, 2);
-            this.tlpEspecialidad.Controls.Add(this.btnAceptar, 1, 2);
-            this.tlpEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEspecialidad.Location = new System.Drawing.Point(0, 0);
-            this.tlpEspecialidad.Name = "tlpEspecialidad";
-            this.tlpEspecialidad.RowCount = 3;
-            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpEspecialidad.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpEspecialidad.Size = new System.Drawing.Size(376, 82);
-            this.tlpEspecialidad.TabIndex = 0;
+            this.tlpEspecialidadDesktop.ColumnCount = 3;
+            this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.06383F));
+            this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.69149F));
+            this.tlpEspecialidadDesktop.Controls.Add(this.lblId, 0, 0);
+            this.tlpEspecialidadDesktop.Controls.Add(this.lblDescripcion, 0, 1);
+            this.tlpEspecialidadDesktop.Controls.Add(this.txtID, 1, 0);
+            this.tlpEspecialidadDesktop.Controls.Add(this.txtDescripcion, 1, 1);
+            this.tlpEspecialidadDesktop.Controls.Add(this.btnCancelar, 2, 2);
+            this.tlpEspecialidadDesktop.Controls.Add(this.btnAceptar, 1, 2);
+            this.tlpEspecialidadDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpEspecialidadDesktop.Location = new System.Drawing.Point(0, 0);
+            this.tlpEspecialidadDesktop.Name = "tlpEspecialidadDesktop";
+            this.tlpEspecialidadDesktop.RowCount = 3;
+            this.tlpEspecialidadDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidadDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidadDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpEspecialidadDesktop.Size = new System.Drawing.Size(376, 82);
+            this.tlpEspecialidadDesktop.TabIndex = 0;
             // 
             // lblId
             // 
@@ -92,7 +92,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tlpEspecialidad.SetColumnSpan(this.txtDescripcion, 2);
+            this.tlpEspecialidadDesktop.SetColumnSpan(this.txtDescripcion, 2);
             this.txtDescripcion.Location = new System.Drawing.Point(128, 29);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(245, 20);
@@ -124,22 +124,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 82);
-            this.Controls.Add(this.tlpEspecialidad);
+            this.Controls.Add(this.tlpEspecialidadDesktop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "EspecialidadDesktop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Especialidad";
             this.Load += new System.EventHandler(this.EspecialidadDesktop_Load);
-            this.Controls.SetChildIndex(this.tlpEspecialidad, 0);
-            this.tlpEspecialidad.ResumeLayout(false);
-            this.tlpEspecialidad.PerformLayout();
+            this.Controls.SetChildIndex(this.tlpEspecialidadDesktop, 0);
+            this.tlpEspecialidadDesktop.ResumeLayout(false);
+            this.tlpEspecialidadDesktop.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tlpEspecialidad;
+        private System.Windows.Forms.TableLayoutPanel tlpEspecialidadDesktop;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtID;

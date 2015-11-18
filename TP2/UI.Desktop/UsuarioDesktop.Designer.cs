@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpUsuarioDesktop = new System.Windows.Forms.TableLayoutPanel();
             this.lblID = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -48,47 +48,47 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.lblPersonaId = new System.Windows.Forms.Label();
             this.txtPersonaId = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpUsuarioDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpUsuarioDesktop
             // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.lblID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblNombre, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblEmail, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblClave, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblApellido, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblUsuario, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblConClave, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtClave, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtUsuario, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtConClave, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.chkHabilitado, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtApellido, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblPersonaId, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtPersonaId, 1, 4);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(371, 136);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpUsuarioDesktop.AutoSize = true;
+            this.tlpUsuarioDesktop.ColumnCount = 4;
+            this.tlpUsuarioDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpUsuarioDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpUsuarioDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpUsuarioDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpUsuarioDesktop.Controls.Add(this.lblID, 0, 0);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblNombre, 0, 1);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblEmail, 0, 2);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblClave, 0, 3);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblApellido, 2, 1);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblUsuario, 2, 2);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblConClave, 2, 3);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtID, 1, 0);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtNombre, 1, 1);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtEmail, 1, 2);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtClave, 1, 3);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtUsuario, 3, 2);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtConClave, 3, 3);
+            this.tlpUsuarioDesktop.Controls.Add(this.btnAceptar, 2, 4);
+            this.tlpUsuarioDesktop.Controls.Add(this.chkHabilitado, 2, 0);
+            this.tlpUsuarioDesktop.Controls.Add(this.btnCancelar, 3, 4);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtApellido, 3, 1);
+            this.tlpUsuarioDesktop.Controls.Add(this.lblPersonaId, 0, 4);
+            this.tlpUsuarioDesktop.Controls.Add(this.txtPersonaId, 1, 4);
+            this.tlpUsuarioDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpUsuarioDesktop.Location = new System.Drawing.Point(0, 0);
+            this.tlpUsuarioDesktop.Name = "tlpUsuarioDesktop";
+            this.tlpUsuarioDesktop.RowCount = 5;
+            this.tlpUsuarioDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUsuarioDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUsuarioDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUsuarioDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUsuarioDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpUsuarioDesktop.Size = new System.Drawing.Size(371, 136);
+            this.tlpUsuarioDesktop.TabIndex = 0;
             // 
             // lblID
             // 
@@ -177,7 +177,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtEmail
             // 
@@ -186,7 +185,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 3;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtClave
             // 
@@ -195,7 +193,6 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(100, 20);
             this.txtClave.TabIndex = 5;
-            this.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtUsuario
             // 
@@ -204,7 +201,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 4;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtConClave
             // 
@@ -213,7 +209,6 @@
             this.txtConClave.Name = "txtConClave";
             this.txtConClave.Size = new System.Drawing.Size(100, 20);
             this.txtConClave.TabIndex = 6;
-            this.txtConClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAceptar
             // 
@@ -255,7 +250,6 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 2;
-            this.txtApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblPersonaId
             // 
@@ -281,14 +275,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(371, 136);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpUsuarioDesktop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = false;
             this.Name = "UsuarioDesktop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.UsuarioDesktop_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpUsuarioDesktop.ResumeLayout(false);
+            this.tlpUsuarioDesktop.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +291,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpUsuarioDesktop;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEmail;

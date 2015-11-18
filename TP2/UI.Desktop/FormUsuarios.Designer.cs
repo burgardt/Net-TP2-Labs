@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.tscUsuarios = new System.Windows.Forms.ToolStripContainer();
-            this.tlUsuario = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpFormUsuarios = new System.Windows.Forms.TableLayoutPanel();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.tscUsuarios.ContentPanel.SuspendLayout();
             this.tscUsuarios.TopToolStripPanel.SuspendLayout();
             this.tscUsuarios.SuspendLayout();
-            this.tlUsuario.SuspendLayout();
+            this.tlpFormUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.tsUsuarios.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // tscUsuarios.ContentPanel
             // 
-            this.tscUsuarios.ContentPanel.Controls.Add(this.tlUsuario);
+            this.tscUsuarios.ContentPanel.Controls.Add(this.tlpFormUsuarios);
             this.tscUsuarios.ContentPanel.Size = new System.Drawing.Size(806, 418);
             this.tscUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tscUsuarios.Location = new System.Drawing.Point(0, 0);
@@ -72,22 +72,22 @@
             // 
             this.tscUsuarios.TopToolStripPanel.Controls.Add(this.tsUsuarios);
             // 
-            // tlUsuario
+            // tlpFormUsuarios
             // 
-            this.tlUsuario.ColumnCount = 2;
-            this.tlUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlUsuario.Controls.Add(this.dgvUsuarios, 0, 0);
-            this.tlUsuario.Controls.Add(this.btnActualizar, 0, 1);
-            this.tlUsuario.Controls.Add(this.btnSalir, 1, 1);
-            this.tlUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlUsuario.Location = new System.Drawing.Point(0, 0);
-            this.tlUsuario.Name = "tlUsuario";
-            this.tlUsuario.RowCount = 2;
-            this.tlUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlUsuario.Size = new System.Drawing.Size(806, 418);
-            this.tlUsuario.TabIndex = 0;
+            this.tlpFormUsuarios.ColumnCount = 2;
+            this.tlpFormUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFormUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpFormUsuarios.Controls.Add(this.dgvUsuarios, 0, 0);
+            this.tlpFormUsuarios.Controls.Add(this.btnActualizar, 0, 1);
+            this.tlpFormUsuarios.Controls.Add(this.btnSalir, 1, 1);
+            this.tlpFormUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpFormUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.tlpFormUsuarios.Name = "tlpFormUsuarios";
+            this.tlpFormUsuarios.RowCount = 2;
+            this.tlpFormUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpFormUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpFormUsuarios.Size = new System.Drawing.Size(806, 418);
+            this.tlpFormUsuarios.TabIndex = 0;
             // 
             // dgvUsuarios
             // 
@@ -104,7 +104,7 @@
             this.email,
             this.habilitado,
             this.idPerson});
-            this.tlUsuario.SetColumnSpan(this.dgvUsuarios, 2);
+            this.tlpFormUsuarios.SetColumnSpan(this.dgvUsuarios, 2);
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(3, 3);
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -202,7 +202,7 @@
             this.tsbEliminar});
             this.tsUsuarios.Location = new System.Drawing.Point(3, 0);
             this.tsUsuarios.Name = "tsUsuarios";
-            this.tsUsuarios.Size = new System.Drawing.Size(184, 25);
+            this.tsUsuarios.Size = new System.Drawing.Size(153, 25);
             this.tsUsuarios.TabIndex = 0;
             // 
             // tsbNuevo
@@ -253,7 +253,7 @@
             this.tscUsuarios.TopToolStripPanel.PerformLayout();
             this.tscUsuarios.ResumeLayout(false);
             this.tscUsuarios.PerformLayout();
-            this.tlUsuario.ResumeLayout(false);
+            this.tlpFormUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.tsUsuarios.ResumeLayout(false);
             this.tsUsuarios.PerformLayout();
@@ -264,7 +264,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStripContainer tscUsuarios;
-        private System.Windows.Forms.TableLayoutPanel tlUsuario;
+        private System.Windows.Forms.TableLayoutPanel tlpFormUsuarios;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;

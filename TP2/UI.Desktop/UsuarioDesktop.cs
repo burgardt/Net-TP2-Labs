@@ -14,10 +14,8 @@ namespace UI.Desktop
 {
     public partial class UsuarioDesktop : ApplicationForm
     {
-        //VARIABLES----------------------------------------------------------------------------------------------------
         private Usuario _UsuarioSelec;
 
-        //CONSTRUCTORES--------------------------------------------------------------------------------------------------
         public UsuarioDesktop(int personaId)
         {
             InitializeComponent();
@@ -146,7 +144,6 @@ namespace UI.Desktop
 
         public override bool Validar()
         {   
-            bool isEmail = Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Console.Write("nombre txt" + txtNombre.Text);
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty ||
                 this.txtEmail.Text == string.Empty || this.txtUsuario.Text == string.Empty ||
@@ -155,7 +152,7 @@ namespace UI.Desktop
                 MessageBox.Show("Alguno de los campos esta vacio");
                 return false;
             }
-            else if (!isEmail)
+            else if (!Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) // valida si el email cumple con expresion regular 
             {
                 MessageBox.Show("Email no tiene un formato valido");
                 return false;

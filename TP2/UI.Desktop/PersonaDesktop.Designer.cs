@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tlpPersonas = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpPersonaDesktop = new System.Windows.Forms.TableLayoutPanel();
             this.lblID = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -54,58 +54,58 @@
             this.txtInfo = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.tlpPersonas.SuspendLayout();
+            this.tlpPersonaDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tlpPersonas
+            // tlpPersonaDesktop
             // 
-            this.tlpPersonas.ColumnCount = 4;
-            this.tlpPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.26042F));
-            this.tlpPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.27083F));
-            this.tlpPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.45833F));
-            this.tlpPersonas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.53125F));
-            this.tlpPersonas.Controls.Add(this.lblID, 0, 0);
-            this.tlpPersonas.Controls.Add(this.lblNombre, 0, 1);
-            this.tlpPersonas.Controls.Add(this.lblDireccion, 0, 3);
-            this.tlpPersonas.Controls.Add(this.lblFechaNac, 0, 6);
-            this.tlpPersonas.Controls.Add(this.cbxDia, 1, 6);
-            this.tlpPersonas.Controls.Add(this.cbxMes, 2, 6);
-            this.tlpPersonas.Controls.Add(this.cbxAnio, 3, 6);
-            this.tlpPersonas.Controls.Add(this.txtID, 1, 0);
-            this.tlpPersonas.Controls.Add(this.txtNombre, 1, 1);
-            this.tlpPersonas.Controls.Add(this.txtDireccion, 1, 3);
-            this.tlpPersonas.Controls.Add(this.lblApellido, 0, 2);
-            this.tlpPersonas.Controls.Add(this.txtApellido, 1, 2);
-            this.tlpPersonas.Controls.Add(this.lblEmail, 0, 4);
-            this.tlpPersonas.Controls.Add(this.lblTelefono, 0, 5);
-            this.tlpPersonas.Controls.Add(this.txtEmail, 1, 4);
-            this.tlpPersonas.Controls.Add(this.txtTelefono, 1, 5);
-            this.tlpPersonas.Controls.Add(this.txtLegajo, 1, 7);
-            this.tlpPersonas.Controls.Add(this.lblLegajo, 0, 7);
-            this.tlpPersonas.Controls.Add(this.lblTipo, 0, 8);
-            this.tlpPersonas.Controls.Add(this.lblPlan, 0, 9);
-            this.tlpPersonas.Controls.Add(this.cbxTipo, 1, 8);
-            this.tlpPersonas.Controls.Add(this.cbxPlan, 1, 9);
-            this.tlpPersonas.Controls.Add(this.txtInfo, 2, 0);
-            this.tlpPersonas.Controls.Add(this.btnAceptar, 2, 10);
-            this.tlpPersonas.Controls.Add(this.btnCancelar, 3, 10);
-            this.tlpPersonas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpPersonas.Location = new System.Drawing.Point(0, 0);
-            this.tlpPersonas.Name = "tlpPersonas";
-            this.tlpPersonas.RowCount = 11;
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlpPersonas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpPersonas.Size = new System.Drawing.Size(406, 296);
-            this.tlpPersonas.TabIndex = 0;
+            this.tlpPersonaDesktop.ColumnCount = 4;
+            this.tlpPersonaDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.26042F));
+            this.tlpPersonaDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.27083F));
+            this.tlpPersonaDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.45833F));
+            this.tlpPersonaDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.53125F));
+            this.tlpPersonaDesktop.Controls.Add(this.lblID, 0, 0);
+            this.tlpPersonaDesktop.Controls.Add(this.lblNombre, 0, 1);
+            this.tlpPersonaDesktop.Controls.Add(this.lblDireccion, 0, 3);
+            this.tlpPersonaDesktop.Controls.Add(this.lblFechaNac, 0, 6);
+            this.tlpPersonaDesktop.Controls.Add(this.cbxDia, 1, 6);
+            this.tlpPersonaDesktop.Controls.Add(this.cbxMes, 2, 6);
+            this.tlpPersonaDesktop.Controls.Add(this.cbxAnio, 3, 6);
+            this.tlpPersonaDesktop.Controls.Add(this.txtID, 1, 0);
+            this.tlpPersonaDesktop.Controls.Add(this.txtNombre, 1, 1);
+            this.tlpPersonaDesktop.Controls.Add(this.txtDireccion, 1, 3);
+            this.tlpPersonaDesktop.Controls.Add(this.lblApellido, 0, 2);
+            this.tlpPersonaDesktop.Controls.Add(this.txtApellido, 1, 2);
+            this.tlpPersonaDesktop.Controls.Add(this.lblEmail, 0, 4);
+            this.tlpPersonaDesktop.Controls.Add(this.lblTelefono, 0, 5);
+            this.tlpPersonaDesktop.Controls.Add(this.txtEmail, 1, 4);
+            this.tlpPersonaDesktop.Controls.Add(this.txtTelefono, 1, 5);
+            this.tlpPersonaDesktop.Controls.Add(this.txtLegajo, 1, 7);
+            this.tlpPersonaDesktop.Controls.Add(this.lblLegajo, 0, 7);
+            this.tlpPersonaDesktop.Controls.Add(this.lblTipo, 0, 8);
+            this.tlpPersonaDesktop.Controls.Add(this.lblPlan, 0, 9);
+            this.tlpPersonaDesktop.Controls.Add(this.cbxTipo, 1, 8);
+            this.tlpPersonaDesktop.Controls.Add(this.cbxPlan, 1, 9);
+            this.tlpPersonaDesktop.Controls.Add(this.txtInfo, 2, 0);
+            this.tlpPersonaDesktop.Controls.Add(this.btnAceptar, 2, 10);
+            this.tlpPersonaDesktop.Controls.Add(this.btnCancelar, 3, 10);
+            this.tlpPersonaDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPersonaDesktop.Location = new System.Drawing.Point(0, 0);
+            this.tlpPersonaDesktop.Name = "tlpPersonaDesktop";
+            this.tlpPersonaDesktop.RowCount = 11;
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPersonaDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpPersonaDesktop.Size = new System.Drawing.Size(406, 296);
+            this.tlpPersonaDesktop.TabIndex = 0;
             // 
             // lblID
             // 
@@ -347,7 +347,7 @@
             // 
             // txtNombre
             // 
-            this.tlpPersonas.SetColumnSpan(this.txtNombre, 2);
+            this.tlpPersonaDesktop.SetColumnSpan(this.txtNombre, 2);
             this.txtNombre.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNombre.Location = new System.Drawing.Point(105, 29);
             this.txtNombre.Name = "txtNombre";
@@ -356,7 +356,7 @@
             // 
             // txtDireccion
             // 
-            this.tlpPersonas.SetColumnSpan(this.txtDireccion, 3);
+            this.tlpPersonaDesktop.SetColumnSpan(this.txtDireccion, 3);
             this.txtDireccion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDireccion.Location = new System.Drawing.Point(105, 81);
             this.txtDireccion.Name = "txtDireccion";
@@ -376,7 +376,7 @@
             // 
             // txtApellido
             // 
-            this.tlpPersonas.SetColumnSpan(this.txtApellido, 2);
+            this.tlpPersonaDesktop.SetColumnSpan(this.txtApellido, 2);
             this.txtApellido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtApellido.Location = new System.Drawing.Point(105, 55);
             this.txtApellido.Name = "txtApellido";
@@ -407,7 +407,7 @@
             // 
             // txtEmail
             // 
-            this.tlpPersonas.SetColumnSpan(this.txtEmail, 3);
+            this.tlpPersonaDesktop.SetColumnSpan(this.txtEmail, 3);
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Location = new System.Drawing.Point(105, 107);
             this.txtEmail.Name = "txtEmail";
@@ -416,7 +416,7 @@
             // 
             // txtTelefono
             // 
-            this.tlpPersonas.SetColumnSpan(this.txtTelefono, 2);
+            this.tlpPersonaDesktop.SetColumnSpan(this.txtTelefono, 2);
             this.txtTelefono.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTelefono.Location = new System.Drawing.Point(105, 133);
             this.txtTelefono.Name = "txtTelefono";
@@ -465,7 +465,7 @@
             // 
             // cbxTipo
             // 
-            this.tlpPersonas.SetColumnSpan(this.cbxTipo, 2);
+            this.tlpPersonaDesktop.SetColumnSpan(this.cbxTipo, 2);
             this.cbxTipo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Items.AddRange(new object[] {
@@ -479,7 +479,7 @@
             // 
             // cbxPlan
             // 
-            this.tlpPersonas.SetColumnSpan(this.cbxPlan, 2);
+            this.tlpPersonaDesktop.SetColumnSpan(this.cbxPlan, 2);
             this.cbxPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxPlan.FormattingEnabled = true;
             this.cbxPlan.Location = new System.Drawing.Point(105, 239);
@@ -524,22 +524,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 296);
-            this.Controls.Add(this.tlpPersonas);
+            this.Controls.Add(this.tlpPersonaDesktop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "PersonaDesktop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Persona";
             this.Load += new System.EventHandler(this.PersonaDesktop_Load);
-            this.Controls.SetChildIndex(this.tlpPersonas, 0);
-            this.tlpPersonas.ResumeLayout(false);
-            this.tlpPersonas.PerformLayout();
+            this.Controls.SetChildIndex(this.tlpPersonaDesktop, 0);
+            this.tlpPersonaDesktop.ResumeLayout(false);
+            this.tlpPersonaDesktop.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tlpPersonas;
+        private System.Windows.Forms.TableLayoutPanel tlpPersonaDesktop;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtID;

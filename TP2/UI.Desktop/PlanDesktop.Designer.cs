@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpPlanDesktop = new System.Windows.Forms.TableLayoutPanel();
             this.lblID = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblEspecialidad = new System.Windows.Forms.Label();
@@ -37,33 +37,33 @@
             this.cbxEspecialidad = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel.SuspendLayout();
+            this.tlpPlanDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel
+            // tlpPlanDesktop
             // 
-            this.tableLayoutPanel.ColumnCount = 3;
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel.Controls.Add(this.lblID, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.lblDescripcion, 0, 1);
-            this.tableLayoutPanel.Controls.Add(this.lblEspecialidad, 0, 2);
-            this.tableLayoutPanel.Controls.Add(this.txtID, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.txtDescripcion, 1, 1);
-            this.tableLayoutPanel.Controls.Add(this.cbxEspecialidad, 1, 2);
-            this.tableLayoutPanel.Controls.Add(this.btnAceptar, 1, 3);
-            this.tableLayoutPanel.Controls.Add(this.btnCancelar, 2, 3);
-            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 4;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.Size = new System.Drawing.Size(384, 109);
-            this.tableLayoutPanel.TabIndex = 0;
+            this.tlpPlanDesktop.ColumnCount = 3;
+            this.tlpPlanDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpPlanDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpPlanDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpPlanDesktop.Controls.Add(this.lblID, 0, 0);
+            this.tlpPlanDesktop.Controls.Add(this.lblDescripcion, 0, 1);
+            this.tlpPlanDesktop.Controls.Add(this.lblEspecialidad, 0, 2);
+            this.tlpPlanDesktop.Controls.Add(this.txtID, 1, 0);
+            this.tlpPlanDesktop.Controls.Add(this.txtDescripcion, 1, 1);
+            this.tlpPlanDesktop.Controls.Add(this.cbxEspecialidad, 1, 2);
+            this.tlpPlanDesktop.Controls.Add(this.btnAceptar, 1, 3);
+            this.tlpPlanDesktop.Controls.Add(this.btnCancelar, 2, 3);
+            this.tlpPlanDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpPlanDesktop.Location = new System.Drawing.Point(0, 0);
+            this.tlpPlanDesktop.Name = "tlpPlanDesktop";
+            this.tlpPlanDesktop.RowCount = 4;
+            this.tlpPlanDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPlanDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPlanDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPlanDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpPlanDesktop.Size = new System.Drawing.Size(384, 109);
+            this.tlpPlanDesktop.TabIndex = 0;
             // 
             // lblID
             // 
@@ -105,7 +105,7 @@
             // 
             // txtDescripcion
             // 
-            this.tableLayoutPanel.SetColumnSpan(this.txtDescripcion, 2);
+            this.tlpPlanDesktop.SetColumnSpan(this.txtDescripcion, 2);
             this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDescripcion.Location = new System.Drawing.Point(76, 29);
             this.txtDescripcion.Name = "txtDescripcion";
@@ -114,7 +114,7 @@
             // 
             // cbxEspecialidad
             // 
-            this.tableLayoutPanel.SetColumnSpan(this.cbxEspecialidad, 2);
+            this.tlpPlanDesktop.SetColumnSpan(this.cbxEspecialidad, 2);
             this.cbxEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxEspecialidad.FormattingEnabled = true;
             this.cbxEspecialidad.Location = new System.Drawing.Point(76, 55);
@@ -149,22 +149,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 109);
-            this.Controls.Add(this.tableLayoutPanel);
+            this.Controls.Add(this.tlpPlanDesktop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "PlanDesktop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Plan";
             this.Load += new System.EventHandler(this.PlanDesktop_Load);
-            this.Controls.SetChildIndex(this.tableLayoutPanel, 0);
-            this.tableLayoutPanel.ResumeLayout(false);
-            this.tableLayoutPanel.PerformLayout();
+            this.Controls.SetChildIndex(this.tlpPlanDesktop, 0);
+            this.tlpPlanDesktop.ResumeLayout(false);
+            this.tlpPlanDesktop.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel tlpPlanDesktop;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblEspecialidad;
