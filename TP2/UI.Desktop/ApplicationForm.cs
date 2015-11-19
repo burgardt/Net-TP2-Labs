@@ -31,23 +31,37 @@ namespace UI.Desktop
             get { return _Modo; }
         }
 
+
         //METODOS-----------------------------------------------------------------------------------------------------
 
+        /* MapearDeDatos va a ser utilizado en cada formulario para copiar la
+        información de las entidades a los controles del formulario (TextBox,
+        ComboBox, etc) para mostrar la infromación de cada entidad
+        */
         public virtual void MapearDeDatos()
         {
 
         }
 
+        /* MapearADatos se va a utilizar para pasar la información de los
+        controles a una entidad para luego enviarla a las capas inferiores*/
         public virtual void MapearADatos()
         {
 
         }
 
+        /*GuardarCambios es el método que se encargará de invocar al método
+        correspondiente de la capa de negocio según sea el ModoForm en que se
+        encuentre el formulario
+         */
         public virtual void GuardarCambios()
         {
 
         }
 
+        /*Validar será el método que devuelva si los datos son válidos para poder
+        registrar los cambios realizados.
+         */
         public virtual bool Validar()
         {
             return false;

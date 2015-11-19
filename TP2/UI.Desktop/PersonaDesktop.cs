@@ -144,7 +144,7 @@ namespace UI.Desktop
                     UsuarioLogic usuarioLogic = new UsuarioLogic();
                     List<Usuario> usuarios = usuarioLogic.GetAll();
                     // valida que la persona este logueada como usuario.
-                    // igual medio al pedo que valide porque entre siempre
+                    // igual no es necesario que valide porque entra siempre
                     bool logueaUsuario = true;
                     foreach (Usuario usuario in usuarios)
                     {

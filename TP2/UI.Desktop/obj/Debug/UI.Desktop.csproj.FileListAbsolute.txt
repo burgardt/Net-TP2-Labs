@@ -58,3 +58,6 @@ C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.Fo
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.ComisionDesktop.resources
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.FormMaterias.resources
 C:\Users\Mauro\Source\Repos\Net-TP2-Labs2\TP2\UI.Desktop\obj\Debug\UI.Desktop.MateriaDesktop.resources
+C:\Users\Burgardt\Source\Repos\Net-TP2-Labs3\TP2\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\Burgardt\Source\Repos\Net-TP2-Labs3\TP2\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\Burgardt\Source\Repos\Net-TP2-Labs3\TP2\UI.Desktop\obj\Debug\UI.Desktop.pdb

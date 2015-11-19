@@ -152,6 +152,7 @@ namespace UI.Desktop
                 MessageBox.Show("Alguno de los campos esta vacio");
                 return false;
             }
+            // Regex.IsMatch busca una coincidencia entre el 1er y 2do parámetro; si la encuentra devuelkve true.
             else if (!Regex.IsMatch(this.txtEmail.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")) // valida si el email cumple con expresion regular 
             {
                 MessageBox.Show("Email no tiene un formato valido");
